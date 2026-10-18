@@ -1,0 +1,37 @@
+{
+  "currentTopic": "ohms-law",
+  "groups": [
+    {"id":"1m1-25","name":"1М1-25","disciplines":["electrical-engineering"]},
+    {"id":"1eo-25","name":"1ЭО-25","disciplines":["electrical-engineering","electrical-materials"]}
+  ],
+  "disciplines": [
+    {
+      "id":"electrical-engineering",
+      "name":"Электротехника",
+      "topics":[
+        {"id":"electrical-quantities","name":"Электрические величины","materials":["quantities-lecture"]},
+        {"id":"ohms-law","name":"Закон Ома для участка цепи","materials":["ohms-lecture","ohms-practice","ohms-slides"]},
+        {"id":"resistors","name":"Соединение резисторов","materials":["resistors-lecture"]}
+      ]
+    },
+    {
+      "id":"electrical-materials",
+      "name":"Электротехнические материалы",
+      "topics":[
+        {"id":"conductors-insulators","name":"Проводники и диэлектрики","materials":["materials-lecture"]},
+        {"id":"conductors","name":"Свойства проводников","materials":["conductors-lecture"]},
+        {"id":"insulation","name":"Выбор изоляции","materials":["insulation-lecture"]}
+      ]
+    }
+  ],
+  "materials": [
+    {"id":"quantities-lecture","type":"lecture","name":"Лекция","description":"Основные электрические величины","file":"content/electrical-quantities.html"},
+    {"id":"ohms-lecture","type":"lecture","name":"Лекция","description":"Текст для чтения на телефоне","file":"content/ohms-law.html"},
+    {"id":"ohms-practice","type":"practice","name":"Практическая работа","description":"Три расчётные задачи с оформлением решения","file":"content/ohms-practice.html"},
+    {"id":"ohms-slides","type":"slides","name":"Презентация","description":"Короткие слайды для занятия и телефона","file":"content/ohms-slides.html"},
+    {"id":"resistors-lecture","type":"lecture","name":"Лекция","description":"Последовательное и параллельное соединение","file":"content/resistors.html"},
+    {"id":"materials-lecture","type":"lecture","name":"Лекция","description":"Материалы, которые проводят и не проводят ток","file":"content/electrical-materials.html"},
+    {"id":"conductors-lecture","type":"lecture","name":"Лекция","description":"Основные свойства проводников","file":"content/conductors.html"},
+    {"id":"insulation-lecture","type":"lecture","name":"Лекция","description":"Критерии выбора изоляционного материала","file":"content/insulation.html"}
+  ]
+}

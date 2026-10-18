@@ -1,0 +1,134 @@
+const main = document.querySelector("#main");
+const typeNames = { lecture: "Лекция", practice: "Практическая работа", lab: "Лабораторная работа", slides: "Презентация", file: "Файл" };
+const typeMarks = { lecture: "Л", practice: "П", lab: "ЛР", slides: "С", file: "↓" };
+let catalogue;
+let slideIndex = 0;
+let readingSize = Number(localStorage.getItem("electrobaza-reading-size")) || 19;
+
+const escapeHTML = (value) => String(value).replace(/[&<>"']/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[char]);
+const findById = (items, id) => items.find((item) => item.id === id);
+const route = () => decodeURIComponent(location.hash.replace(/^#\/?/, "")).split("/").filter(Boolean);
+const href = (parts) => `#/${parts.map(encodeURIComponent).join("/")}`;
+
+function breadcrumb(items) {
+  return `<nav class="breadcrumb" aria-label="Навигация">${items.map((item, index) => `${index ? '<span class="crumb-separator" aria-hidden="true">/</span>' : ""}${index === items.length - 1 ? `<span class="current" aria-current="page">${escapeHTML(item.label)}</span>` : `<a href="${href(item.path)}">${escapeHTML(item.label)}</a>`}`).join("")}</nav>`;
+}
+
+function intro(eyebrow, title, subtitle = "") {
+  return `<div class="intro"><span class="eyebrow">${escapeHTML(eyebrow)}</span><h1>${escapeHTML(title)}</h1>${subtitle ? `<p>${escapeHTML(subtitle)}</p>` : ""}</div>`;
+}
+
+function groupPage() {
+  main.innerHTML = `${intro("Electrobaza · 2026 / 27", "Материалы к занятиям", "Лекции, практические и лабораторные работы. Выберите свою группу.")}<div class="group-grid">${catalogue.groups.map((group) => {
+    const subjects = group.disciplines.map((id) => findById(catalogue.disciplines, id)).filter(Boolean);
+    return `<a class="group-card" href="${href(["group", group.id])}"><span class="group-icon" aria-hidden="true">E</span><span class="card-copy"><strong>${escapeHTML(group.name)}</strong><small>${subjects.length} ${subjects.length === 1 ? "дисциплина" : "дисциплины"} · открыть материалы</small></span><span class="arrow" aria-hidden="true">→</span></a>`;
+  }).join("")}</div><p class="course-note">Материалы доступны без регистрации. Ссылку на нужную тему можно открыть с телефона.</p>`;
+  document.title = "Electrobaza — учебные материалы";
+}
+
+function groupPageById(groupId) {
+  const group = findById(catalogue.groups, groupId);
+  if (!group) return notFound();
+  const subjects = group.disciplines.map((id) => findById(catalogue.disciplines, id)).filter(Boolean);
+  const currentSubject = subjects.find((subject) => subject.topics.some((topic) => topic.id === catalogue.currentTopic));
+  const currentTopic = currentSubject?.topics.find((topic) => topic.id === catalogue.currentTopic);
+  const current = currentTopic ? `<section class="current-callout" aria-label="Материал текущей пары"><div><span class="eyebrow">На текущую пару</span><h2>${escapeHTML(currentTopic.name)}</h2><p>${escapeHTML(currentSubject.name)} · открыть материал</p></div><a class="button button-light" href="${href(["group", group.id, "subject", currentSubject.id, "topic", currentTopic.id])}">Открыть тему →</a></section>` : "";
+  main.innerHTML = `${breadcrumb([{ label: "Группы", path: [] }, { label: group.name, path: ["group", group.id] }])}${intro("Ваша группа", group.name, "Выберите дисциплину.")}${current}<h2 class="section-heading">Дисциплины</h2><div class="list">${subjects.map((subject) => `<a class="list-link" href="${href(["group", group.id, "subject", subject.id])}"><span class="row-icon" aria-hidden="true">EE</span><span class="row-copy"><strong>${escapeHTML(subject.name)}</strong><small>${subject.topics.length} ${subject.topics.length === 1 ? "тема" : "темы"} · весь курс</small></span><span class="arrow" aria-hidden="true">→</span></a>`).join("")}</div>`;
+    document.title = `${group.name} — Electrobaza`;
+}
+
+function subjectPage(groupId, subjectId) {
+  const group = findById(catalogue.groups, groupId);
+  const subject = findById(catalogue.disciplines, subjectId);
+  if (!group || !subject || !group.disciplines.includes(subject.id)) return notFound();
+  main.innerHTML = `${breadcrumb([{ label: "Группы", path: [] }, { label: group.name, path: ["group", group.id] }, { label: subject.name, path: ["group", group.id, "subject", subject.id] }])}${intro(`${group.name} · дисциплина`, subject.name, "Темы курса расположены в порядке изучения.")}<div class="list">${subject.topics.map((topic, index) => `<a class="list-link" href="${href(["group", group.id, "subject", subject.id, "topic", topic.id])}"><span class="topic-number">${String(index + 1).padStart(2, "0")}</span><span class="row-copy"><strong>${escapeHTML(topic.name)}</strong><small>${topic.materials.map((id) => findById(catalogue.materials, id)).filter(Boolean).map((material) => typeNames[material.type] || "Материал").join(" · ")}</small></span><span class="arrow" aria-hidden="true">→</span></a>`).join("")}</div><p class="course-note">Весь курс открыт для просмотра.</p>`;
+  document.title = `${subject.name} — Electrobaza`;
+}
+
+function topicPage(groupId, subjectId, topicId) {
+  const group = findById(catalogue.groups, groupId);
+  const subject = findById(catalogue.disciplines, subjectId);
+  const topic = subject && findById(subject.topics, topicId);
+  if (!group || !subject || !group.disciplines.includes(subject.id) || !topic) return notFound();
+  const topicIndex = subject.topics.findIndex((item) => item.id === topic.id);
+  const materials = topic.materials.map((id) => findById(catalogue.materials, id)).filter(Boolean);
+  main.innerHTML = `${breadcrumb([{ label: "Группы", path: [] }, { label: group.name, path: ["group", group.id] }, { label: subject.name, path: ["group", group.id, "subject", subject.id] }, { label: topic.name, path: ["group", group.id, "subject", subject.id, "topic", topic.id] }])}${intro(`${subject.name} · тема ${topicIndex + 1}`, topic.name, "Материалы к занятию.")}<div class="list">${materials.map((material) => `<a class="list-link" href="${href(["material", group.id, subject.id, topic.id, material.id])}"><span class="row-icon" aria-hidden="true">${escapeHTML(typeMarks[material.type] || "М")}</span><span class="row-copy"><strong>${escapeHTML(material.name)}</strong><small>${escapeHTML(material.description || typeNames[material.type] || "Учебный материал")}</small></span><span class="arrow" aria-hidden="true">→</span></a>`).join("")}</div>`;
+  document.title = `${topic.name} — Electrobaza`;
+}
+
+async function materialPage(groupId, subjectId, topicId, materialId) {
+  const group = findById(catalogue.groups, groupId);
+  const subject = findById(catalogue.disciplines, subjectId);
+  const topic = subject && findById(subject.topics, topicId);
+  const material = topic && topic.materials.includes(materialId) && findById(catalogue.materials, materialId);
+  if (!group || !subject || !group.disciplines.includes(subject.id) || !topic || !material) return notFound();
+  main.innerHTML = `${breadcrumb([{ label: "Группы", path: [] }, { label: group.name, path: ["group", group.id] }, { label: subject.name, path: ["group", group.id, "subject", subject.id] }, { label: topic.name, path: ["group", group.id, "subject", subject.id, "topic", topic.id] }, { label: material.name, path: ["material", group.id, subject.id, topic.id, material.id] }])}${intro(typeNames[material.type] || "Материал", topic.name, material.description || "")}<div class="reader-layout"><div class="reader-tools"><p>Чтение с телефона и компьютера</p><button type="button" class="text-size-button" id="text-size" aria-label="Увеличить размер текста">Размер текста: ${readingSize}px +</button></div><article class="material-reader" id="reader" aria-live="polite"><p class="loading">Открываем материал…</p></article><div class="pager" id="slide-controls" hidden><button type="button" class="button button-outline" id="slide-prev">← Назад</button><button type="button" class="button" id="slide-next">Далее →</button></div></div><p class="course-note"><a href="${href(["group", group.id, "subject", subject.id, "topic", topic.id])}">← Вернуться ко всем материалам темы</a></p>`;
+  document.title = `${material.name}: ${topic.name} — Electrobaza`;
+  document.querySelector("#text-size").addEventListener("click", () => {
+    readingSize = readingSize >= 22 ? 17 : readingSize + 1;
+    localStorage.setItem("electrobaza-reading-size", String(readingSize));
+    document.querySelector("#reader").style.setProperty("--reading-size", `${readingSize}px`);
+    document.querySelector("#text-size").textContent = `Размер текста: ${readingSize}px +`;
+  });
+  try {
+    const response = await fetch(material.file);
+    if (!response.ok) throw new Error(`Не удалось открыть файл: ${response.status}`);
+    document.querySelector("#reader").innerHTML = await response.text();
+    document.querySelector("#reader").style.setProperty("--reading-size", `${readingSize}px`);
+    if (material.type === "slides") setupSlides();
+  } catch (error) {
+    document.querySelector("#reader").innerHTML = `<p class="error">Материал пока недоступен. Обновите страницу немного позже.</p>`;
+    console.error(error);
+  }
+}
+
+function setupSlides() {
+  const reader = document.querySelector("#reader");
+  const slides = [...reader.querySelectorAll("[data-slide]")];
+  if (!slides.length) return;
+  const controls = document.querySelector("#slide-controls");
+  const previous = document.querySelector("#slide-prev");
+  const next = document.querySelector("#slide-next");
+  controls.hidden = false;
+  slideIndex = 0;
+  const update = () => {
+    slides.forEach((slide, index) => { slide.hidden = index !== slideIndex; });
+    previous.disabled = slideIndex === 0;
+    next.disabled = slideIndex === slides.length - 1;
+    previous.setAttribute("aria-label", `Предыдущий слайд, ${slideIndex} из ${slides.length}`);
+    next.setAttribute("aria-label", `Следующий слайд, ${slideIndex + 2} из ${slides.length}`);
+  };
+  previous.addEventListener("click", () => { if (slideIndex > 0) { slideIndex -= 1; update(); } });
+  next.addEventListener("click", () => { if (slideIndex < slides.length - 1) { slideIndex += 1; update(); } });
+  update();
+}
+
+function notFound() {
+  main.innerHTML = `${breadcrumb([{ label: "Группы", path: [] }, { label: "Материал не найден", path: ["not-found"] }])}<div class="intro"><span class="eyebrow">Такой страницы нет</span><h1>Материал не найден</h1><p>Возможно, ссылка устарела. Вернитесь к списку групп.</p></div><a class="button" href="#/">К группам</a>`;
+  document.title = "Материал не найден — Electrobaza";
+}
+
+function render() {
+  const parts = route();
+  if (parts.length === 0) return groupPage();
+  if (parts[0] === "group" && parts.length === 2) return groupPageById(parts[1]);
+  if (parts[0] === "group" && parts[2] === "subject" && parts.length === 4) return subjectPage(parts[1], parts[3]);
+  if (parts[0] === "group" && parts[2] === "subject" && parts[4] === "topic" && parts.length === 6) return topicPage(parts[1], parts[3], parts[5]);
+  if (parts[0] === "material" && parts.length === 5) return materialPage(parts[1], parts[2], parts[3], parts[4]);
+  return notFound();
+}
+
+async function start() {
+  try {
+    const response = await fetch("materials.json");
+    if (!response.ok) throw new Error(`Не удалось загрузить каталог: ${response.status}`);
+    catalogue = await response.json();
+    window.addEventListener("hashchange", render);
+    render();
+  } catch (error) {
+    main.innerHTML = `<p class="error">Не удалось загрузить список материалов. Проверьте, что сайт открыт по ссылке GitHub Pages.</p>`;
+    console.error(error);
+  }
+}
+
+start();
