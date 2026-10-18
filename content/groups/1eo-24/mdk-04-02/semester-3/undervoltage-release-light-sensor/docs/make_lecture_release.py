@@ -37,14 +37,21 @@ TEXT = [
     ("p", "В низковольтных щитах расцепитель выполняют в виде отдельного модуля, который встраивают в аппарат или присоединяют к нему сбоку. Автоматический выключатель без такого модуля защищает только от токов перегрузки и короткого замыкания."),
     ("img", "cb-2pole-din.jpg",
      "Автоматический выключатель IEK BA47-29 C16",
-     "Фото: Kae, Wikimedia Commons, CC BY-SA 3.0"),
-    ("p", "Модуль расцепителя имеет две клеммы для цепи управления и механически связан с замком аппарата. На контакторах роль расцепителя часто выполняет сама втягивающая катушка: при потере напряжения она отпускает якорь с главными контактами."),
+     ),
+    ("img", "rele-iek-ar-aux-ux21.png",
+     "Расцепитель минимального напряжения IEK ARMAT AR-AUX-UX21, Ue 230 В",
+     ),
+    ("p", "Модуль расцепителя имеет две клеммы для цепи управления (у этого аппарата — D1 и D2) и механически связан с замком аппарата. На контакторах роль расцепителя часто выполняет сама втягивающая катушка: при потере напряжения она отпускает якорь с главными контактами."),
     ("img", "contactor-iek.jpg",
      "Контактор IEK КМИ-11610: клеммы катушки А1 и А2",
-     "Фото: Kae, Wikimedia Commons, CC BY-SA 3.0"),
+     ),
 
     ("h", "Устройство и принцип действия"),
     ("p", "Основные части расцепителя: катушка с магнитопроводом, подвижный якорь, возвратная пружина и толкатель (ударник). Катушку питают от той же цепи, напряжение которой контролируют, либо от отдельного источника: пока напряжение в норме, якорь притянут и удерживает замок, а при снижении напряжения ниже уставки пружина отпускает якорь, и аппарат размыкается. После восстановления напряжения аппарат сам не включается — его взводят вручную."),
+    ("p", "На схеме расцепитель обозначают прямоугольником с подписью U<. Катушку включают между фазой и нейтралью на клеммах D1 и D2 (на контакторах — А1 и А2), а пунктирная линия обозначает механическую связь с коммутируемым аппаратом."),
+    ("img", "schema-uk.png",
+     "Схема включения расцепителя минимального напряжения: катушка U< на клеммах D1 и D2, пунктирная линия — механическая связь с контактором",
+     ),
     ("p", "Значения напряжения, при которых расцепитель обязан удерживать и обязан отпускать аппарат, заданы стандартом."),
     ("table", [
         ["Напряжение на катушке", "Поведение расцепителя"],
@@ -101,13 +108,12 @@ def add_rich(paragraph, text, size=11, bold=False, italic=False, color=None):
         add_run(paragraph, text[position:], size, bold, italic, color)
 
 
-def add_caption(document, text, credit):
+def add_caption(document, text):
     caption = document.add_paragraph()
     caption.alignment = WD_ALIGN_PARAGRAPH.CENTER
     caption.paragraph_format.space_after = Pt(4)
     caption.paragraph_format.keep_together = True
-    add_run(caption, text + " ", size=9, italic=True, color=RGBColor(90, 90, 90))
-    add_run(caption, credit, size=8, color=RGBColor(120, 120, 120))
+    add_run(caption, text, size=9, italic=True, color=RGBColor(90, 90, 90))
 
 
 def make_docx(path):
@@ -123,7 +129,7 @@ def make_docx(path):
     normal = document.styles["Normal"]
     normal.font.name = "Times New Roman"
     normal.font.size = Pt(11)
-    normal.paragraph_format.line_spacing = 1.15
+    normal.paragraph_format.line_spacing = 1.1
     normal.paragraph_format.space_after = Pt(3)
 
     heading = document.styles["Heading 1"]
@@ -163,15 +169,15 @@ def make_docx(path):
             paragraph.paragraph_format.keep_together = True
             add_rich(paragraph, value[0])
         elif kind == "img":
-            filename, alt, credit = value
+            filename, alt = value[:2]
             caption_index += 1
             picture = document.add_paragraph()
             picture.alignment = WD_ALIGN_PARAGRAPH.CENTER
             picture.paragraph_format.space_before = Pt(4)
             picture.paragraph_format.space_after = Pt(1)
             picture.paragraph_format.keep_with_next = True
-            picture.add_run().add_picture(os.path.join(IMAGE_ROOT, filename), width=Cm(5))
-            add_caption(document, f"Рисунок {caption_index} — {alt}.", credit)
+            picture.add_run().add_picture(os.path.join(IMAGE_ROOT, filename), width=Cm(3.8))
+            add_caption(document, f"Рисунок {caption_index} — {alt}.")
         elif kind == "table":
             rows = value[0]
             table = document.add_table(rows=len(rows), cols=len(rows[0]))
@@ -193,6 +199,12 @@ def make_docx(path):
     document.save(path)
 
 
+def html_text(text):
+    """Экранирует текст, но сохраняет разметку индексов <sub> и <sup>."""
+    escaped = html.escape(text, quote=False)
+    return re.sub(r"&lt;(/?)(sub|sup)&gt;", r"<\1\2>", escaped)
+
+
 def make_html(path):
     parts = []
     open_section = False
@@ -208,47 +220,42 @@ def make_html(path):
         if kind == "h":
             close_section()
             parts.append("<section>\n")
-            parts.append(f"  <h2>{html.escape(value[0], quote=False)}</h2>\n")
+            parts.append(f"  <h2>{html_text(value[0])}</h2>\n")
             open_section = True
         elif kind == "p":
-            parts.append(f"  <p>{html.escape(value[0], quote=False)}</p>\n")
+            parts.append(f"  <p>{html_text(value[0])}</p>\n")
         elif kind == "ul":
             parts.append("  <ul>\n")
             for item in value[0]:
-                parts.append(f"    <li>{html.escape(item, quote=False)}</li>\n")
+                parts.append(f"    <li>{html_text(item)}</li>\n")
             parts.append("  </ul>\n")
         elif kind == "f":
-            parts.append(f'  <ul class="formulas">\n    <li>{html.escape(value[0], quote=False)}</li>\n  </ul>\n')
+            parts.append(f'  <ul class="formulas">\n    <li>{html_text(value[0])}</li>\n  </ul>\n')
         elif kind == "img":
-            filename, alt, credit = value
+            filename, alt = value[:2]
             caption_index += 1
             parts.append(
                 "  <figure>\n"
-                f'    <img src="{IMAGE_URL}/{filename}" alt="{html.escape(alt)}" />\n'
-                f"    <figcaption>Рисунок {caption_index} — {html.escape(alt, quote=False)}. {html.escape(credit, quote=False)}</figcaption>\n"
+                f'    <img src="{IMAGE_URL}/{filename}" alt="{html_text(alt)}" />\n'
+                f"    <figcaption>Рисунок {caption_index} — {html_text(alt)}.</figcaption>\n"
                 "  </figure>\n"
             )
         elif kind == "table":
             rows = value[0]
             parts.append("  <table>\n    <thead>\n      <tr>")
             for head in rows[0]:
-                parts.append(f"<th>{html.escape(head, quote=False)}</th>")
+                parts.append(f"<th>{html_text(head)}</th>")
             parts.append("</tr>\n    </thead>\n    <tbody>\n")
             for row in rows[1:]:
                 parts.append("      <tr>")
                 for cell in row:
-                    parts.append(f"<td>{html.escape(cell, quote=False)}</td>")
+                    parts.append(f"<td>{html_text(cell)}</td>")
                 parts.append("</tr>\n")
             parts.append("    </tbody>\n  </table>\n")
 
     close_section()
     parts.append(
-        '<section>\n  <h2>Источники иллюстраций</h2>\n'
-        '  <ul>\n'
-        '    <li><a href="https://commons.wikimedia.org/wiki/File:Circuit_breaker_2_pole_on_DIN_rail.JPG">Автоматический выключатель IEK BA47-29 C16</a> — Kae, CC BY-SA 3.0</li>\n'
-        '    <li><a href="https://commons.wikimedia.org/wiki/File:Contactor_DIN_IEK.jpg">Контактор IEK КМИ-11610</a> — Kae, CC BY-SA 3.0</li>\n'
-        '  </ul>\n'
-        '  <p>Изображения получены из Wikimedia Commons и используются по указанным лицензиям.</p>\n'
+        '<section>\n'
         f'  <p><a href="{DOCX_URL}">Скачать лекцию в Word (.docx)</a></p>\n'
         '</section>\n'
     )
