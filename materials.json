@@ -35,7 +35,7 @@
         {
           "id":"undervoltage-release-light-sensor",
           "name":"Монтаж, наладка и ремонт схемы, содержащей расцепитель минимального напряжения и датчик освещённости",
-          "materials":["undervoltage-release-light-sensor-practice"]
+          "materials":["undervoltage-release-light-sensor-lecture","undervoltage-release-light-sensor-practice"]
         }
       ]
     },
@@ -65,6 +65,13 @@
     }
   ],
   "materials": [
+    {
+      "id":"undervoltage-release-light-sensor-lecture",
+      "type":"lecture",
+      "name":"Лекция",
+      "description":"Краткая лекция: расчёт схемы с расцепителем минимального напряжения и датчиком освещённости",
+      "file":"content/groups/1eo-24/mdk-04-02/semester-3/undervoltage-release-light-sensor/lecture.html"
+    },
     {
       "id":"undervoltage-release-light-sensor-practice",
       "type":"practice",

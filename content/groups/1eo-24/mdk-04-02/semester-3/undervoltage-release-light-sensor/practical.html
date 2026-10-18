@@ -48,12 +48,44 @@
   <p>Пример для варианта 8. Для своего варианта подставьте данные таблицы 1; порядок расчёта не меняется.</p>
 
   <h3>1. Цепь расцепителя</h3>
-  <p class="formula">I<sub>н</sub> = P<sub>н</sub> / U<sub>н</sub>; R<sub>к</sub> = U<sub>н</sub><sup>2</sup> / P<sub>н</sub>; U<sub>отп</sub> = 0,5 · U<sub>н</sub>; U<sub>вкл</sub> = 0,85 · U<sub>н</sub></p>
-  <p>Для 24 В и 3 Вт: I<sub>н</sub> = 0,125 А; R<sub>к</sub> = 192 Ом; U<sub>отп</sub> = 12 В; U<sub>вкл</sub> = 20,4 В. При 40 °C сопротивление катушки 207,4 Ом, поэтому U<sub>отп</sub> = 12,96 В (+8 %). При l<sub>р</sub> = 50 м и S = 1,5 мм² потеря в линии 0,146 В; на катушке 23,85 В, что выше 20,4 В. Суммарная мощность схемы 4,7 Вт, ток 0,196 А — блок 24 В на 1,25 А подходит.</p>
+  <ul class="formulas">
+    <li>I<sub>н</sub> = P<sub>н</sub> / U<sub>н</sub></li>
+    <li>R<sub>к</sub> = U<sub>н</sub><sup>2</sup> / P<sub>н</sub></li>
+    <li>U<sub>отп</sub> = 0,5 · U<sub>н</sub></li>
+    <li>U<sub>вкл</sub> = 0,85 · U<sub>н</sub></li>
+  </ul>
+  <ul>
+    <li>I<sub>н</sub> = 0,125 А.</li>
+    <li>R<sub>к</sub> = 192 Ом.</li>
+    <li>U<sub>отп</sub> = 12 В.</li>
+    <li>U<sub>вкл</sub> = 20,4 В.</li>
+    <li>При 40 °C: R = 207,4 Ом.</li>
+    <li>U<sub>отп</sub> = 12,96 В (+8 %).</li>
+    <li>При l<sub>р</sub> = 50 м, S = 1,5 мм²:</li>
+    <li>ΔU = 0,146 В.</li>
+    <li>U<sub>кат</sub> = 23,85 В, что выше 20,4 В.</li>
+    <li>P<sub>Σ</sub> = 4,7 Вт.</li>
+    <li>I<sub>Σ</sub> = 0,196 А.</li>
+    <li>Блок 24 В на 1,25 А подходит.</li>
+  </ul>
 
   <h3>2. Датчик освещённости</h3>
-  <p class="formula">R<sub>1</sub> = R<sub>ф</sub>(E<sub>вкл</sub>) · (U<sub>пит</sub> / U<sub>пор</sub> − 1); U<sub>вых</sub> = U<sub>пит</sub> · R<sub>ф</sub> / (R<sub>1</sub> + R<sub>ф</sub>); U<sub>отк</sub> = (1 − h) · U<sub>вкл</sub></p>
-  <p>Для E<sub>вкл</sub> = 150 лк R<sub>ф</sub> = 5,5 кОм: R<sub>1</sub> = 5,5 · 3,8 = 20,9 кОм, принимаем 20 кОм. Порог 2,5 В достигается при R<sub>ф</sub> = 5,26 кОм, что соответствует E<sub>вкл</sub> ≈ 164 лк. При h = 25 % U<sub>отк</sub> = 1,875 В, R<sub>ф</sub> = 3,70 кОм, E<sub>отк</sub> ≈ 258 лк; гистерезис по освещённости 94 лк.</p>
+  <ul class="formulas">
+    <li class="small">R<sub>1</sub> = R<sub>ф</sub>(E<sub>вкл</sub>) · (U<sub>пит</sub> / U<sub>пор</sub> − 1)</li>
+    <li class="small">U<sub>вых</sub> = U<sub>пит</sub> · R<sub>ф</sub> / (R<sub>1</sub> + R<sub>ф</sub>)</li>
+    <li>U<sub>отк</sub> = (1 − h) · U<sub>вкл</sub></li>
+  </ul>
+  <ul>
+    <li>При E<sub>вкл</sub> = 150 лк: R<sub>ф</sub> = 5,5 кОм.</li>
+    <li>R<sub>1</sub> = 5,5 · 3,8 = 20,9 кОм.</li>
+    <li>Принимаем R<sub>1</sub> = 20 кОм.</li>
+    <li>Порог 2,5 В: R<sub>ф</sub> = 5,26 кОм.</li>
+    <li>E<sub>вкл</sub> ≈ 164 лк.</li>
+    <li>При h = 25 %: U<sub>отк</sub> = 1,875 В.</li>
+    <li>R<sub>ф</sub> = 3,70 кОм.</li>
+    <li>E<sub>отк</sub> ≈ 258 лк.</li>
+    <li>Гистерезис 94 лк.</li>
+  </ul>
   <p>Рассчитайте U<sub>вых</sub> для своего R<sub>1</sub> по таблице 2 и постройте график.</p>
   <figure>
     <img src="content/groups/1eo-24/mdk-04-02/semester-3/undervoltage-release-light-sensor/images/sensor-divider.svg" alt="График выходного напряжения делителя с фоторезистором в зависимости от освещённости с порогами включения 164 люкс и отключения 258 люкс" />
@@ -61,8 +93,18 @@
   </figure>
 
   <h3>3. Осветительная линия</h3>
-  <p class="formula">I<sub>л</sub> = P<sub>л</sub> / U<sub>с</sub>; ΔU = 2 · ρ · L · I<sub>л</sub> / S; ΔU, % = 100 · ΔU / U<sub>с</sub></p>
-  <p>Для P<sub>л</sub> = 3,0 кВт I<sub>л</sub> = 13,04 А. Результаты для L = 60 м приведены в таблице 3. Условию 3 % удовлетворяют 4 и 6 мм²; принимаем 4 мм², при возможности — 6 мм² с запасом. Автоматический выключатель B16 согласован с кабелем 4 мм².</p>
+  <ul class="formulas">
+    <li>I<sub>л</sub> = P<sub>л</sub> / U<sub>с</sub></li>
+    <li>ΔU = 2 · ρ · L · I<sub>л</sub> / S</li>
+    <li>ΔU, % = 100 · ΔU / U<sub>с</sub></li>
+  </ul>
+  <ul>
+    <li>I<sub>л</sub> = 13,04 А.</li>
+    <li>Результаты — в таблице 3.</li>
+    <li>Принимаем 4 мм².</li>
+    <li>Лучше 6 мм² с запасом.</li>
+    <li>Автоматический выключатель B16.</li>
+  </ul>
   <table>
     <caption>Таблица 3 — Потеря напряжения при L = 60 м и I<sub>л</sub> = 13,04 А</caption>
     <thead>
