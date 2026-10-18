@@ -19,6 +19,12 @@ GitHub Pages republishes the site after each commit to `main`.
 - `app.js` — navigation between groups, subjects, topics, and materials.
 - `materials.json` — the catalogue of groups, topics, and material entries.
 - `content/` — HTML fragments for lessons, assignments, and slides.
+- `catalogue-data.js` — generated local copy of the catalogue and lesson HTML, so `index.html` also works when opened directly as a file.
+- `build-catalogue.mjs` / `build-catalogue.cmd` — regenerate that local copy.
+
+## Open locally
+
+Double-click `index.html` for a simple local preview. After changing `materials.json` or a file in `content/`, run `build-catalogue.cmd`, then refresh the page. For a live preview that rebuilds the catalogue and refreshes the browser after each saved change, run `preview.cmd` instead. Keep its console window open while previewing.
 
 ## Add a material
 
@@ -31,7 +37,8 @@ GitHub Pages republishes the site after each commit to `main`.
 
 3. Add the material ID to the `materials` list of the relevant topic.
 4. To share one material with several groups, add its topic to each group's subject catalogue. Reuse the same material ID and HTML file.
-5. In GitHub, choose **Add file → Upload files**, add the changed files, and click **Commit changes**.
+5. Run `build-catalogue.cmd` before publishing so `catalogue-data.js` contains the updated catalogue and HTML.
+6. In GitHub Desktop, review the changed files, commit them to `main`, and click **Push origin**.
 
 Supported types are `lecture`, `practice`, `lab`, `slides`, and `file`. The catalogue must remain valid JSON. The text, materials, and repository are public; do not add students' personal data or restricted content.
 

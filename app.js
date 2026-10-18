@@ -2,8 +2,25 @@ const main = document.querySelector("#main");
 const typeNames = { lecture: "Лекция", practice: "Практическая работа", lab: "Лабораторная работа", slides: "Презентация", file: "Файл" };
 const typeMarks = { lecture: "Л", practice: "П", lab: "ЛР", slides: "С", file: "↓" };
 let catalogue;
+let materialContent;
 let slideIndex = 0;
-let readingSize = Number(localStorage.getItem("electrobaza-reading-size")) || 19;
+const storage = {
+  getItem(key) {
+    try {
+      return window.localStorage.getItem(key);
+    } catch {
+      return null;
+    }
+  },
+  setItem(key, value) {
+    try {
+      window.localStorage.setItem(key, value);
+    } catch {
+      // Direct file previews may not allow browser storage.
+    }
+  },
+};
+let readingSize = Number(storage.getItem("electrobaza-reading-size")) || 19;
 
 const escapeHTML = (value) => String(value).replace(/[&<>"']/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[char]);
 const findById = (items, id) => items.find((item) => item.id === id);
@@ -15,15 +32,15 @@ function breadcrumb(items) {
 }
 
 function intro(eyebrow, title, subtitle = "") {
-  return `<div class="intro"><span class="eyebrow">${escapeHTML(eyebrow)}</span><h1>${escapeHTML(title)}</h1>${subtitle ? `<p>${escapeHTML(subtitle)}</p>` : ""}</div>`;
+  return `<div class="intro">${eyebrow ? `<span class="eyebrow">${escapeHTML(eyebrow)}</span>` : ""}<h1>${escapeHTML(title)}</h1>${subtitle ? `<p>${escapeHTML(subtitle)}</p>` : ""}</div>`;
 }
 
 function groupPage() {
-  main.innerHTML = `${intro("Electrobaza · 2026 / 27", "Материалы к занятиям", "Лекции, практические и лабораторные работы. Выберите свою группу.")}<div class="group-grid">${catalogue.groups.map((group) => {
+  main.innerHTML = `${intro("", "Материалы к занятиям")}<div class="group-grid">${catalogue.groups.map((group) => {
     const subjects = group.disciplines.map((id) => findById(catalogue.disciplines, id)).filter(Boolean);
     return `<a class="group-card" href="${href(["group", group.id])}"><span class="group-icon" aria-hidden="true">E</span><span class="card-copy"><strong>${escapeHTML(group.name)}</strong><small>${subjects.length} ${subjects.length === 1 ? "дисциплина" : "дисциплины"} · открыть материалы</small></span><span class="arrow" aria-hidden="true">→</span></a>`;
-  }).join("")}</div><p class="course-note">Материалы доступны без регистрации. Ссылку на нужную тему можно открыть с телефона.</p>`;
-  document.title = "Electrobaza — учебные материалы";
+  }).join("")}</div>`;
+  document.title = "Электробаза — учебные материалы";
 }
 
 function groupPageById(groupId) {
@@ -33,16 +50,19 @@ function groupPageById(groupId) {
   const currentSubject = subjects.find((subject) => subject.topics.some((topic) => topic.id === catalogue.currentTopic));
   const currentTopic = currentSubject?.topics.find((topic) => topic.id === catalogue.currentTopic);
   const current = currentTopic ? `<section class="current-callout" aria-label="Материал текущей пары"><div><span class="eyebrow">На текущую пару</span><h2>${escapeHTML(currentTopic.name)}</h2><p>${escapeHTML(currentSubject.name)} · открыть материал</p></div><a class="button button-light" href="${href(["group", group.id, "subject", currentSubject.id, "topic", currentTopic.id])}">Открыть тему →</a></section>` : "";
-  main.innerHTML = `${breadcrumb([{ label: "Группы", path: [] }, { label: group.name, path: ["group", group.id] }])}${intro("Ваша группа", group.name, "Выберите дисциплину.")}${current}<h2 class="section-heading">Дисциплины</h2><div class="list">${subjects.map((subject) => `<a class="list-link" href="${href(["group", group.id, "subject", subject.id])}"><span class="row-icon" aria-hidden="true">EE</span><span class="row-copy"><strong>${escapeHTML(subject.name)}</strong><small>${subject.topics.length} ${subject.topics.length === 1 ? "тема" : "темы"} · весь курс</small></span><span class="arrow" aria-hidden="true">→</span></a>`).join("")}</div>`;
-    document.title = `${group.name} — Electrobaza`;
+  main.innerHTML = `${breadcrumb([{ label: "Группы", path: [] }, { label: group.name, path: ["group", group.id] }])}${intro("Ваша группа", group.name, "Выберите дисциплину.")}${current}<h2 class="section-heading">Дисциплины</h2><div class="list">${subjects.map((subject) => `<a class="list-link" href="${href(["group", group.id, "subject", subject.id])}"><span class="row-icon" aria-hidden="true">EE</span><span class="row-copy"><strong>${escapeHTML(subject.name)}</strong><small>${subject.topics.length ? `${subject.topics.length} ${subject.topics.length === 1 ? "тема" : "темы"} · весь курс` : "Темы скоро появятся"}</small></span><span class="arrow" aria-hidden="true">→</span></a>`).join("")}</div>`;
+    document.title = `${group.name} — Электробаза`;
 }
 
 function subjectPage(groupId, subjectId) {
   const group = findById(catalogue.groups, groupId);
   const subject = findById(catalogue.disciplines, subjectId);
   if (!group || !subject || !group.disciplines.includes(subject.id)) return notFound();
-  main.innerHTML = `${breadcrumb([{ label: "Группы", path: [] }, { label: group.name, path: ["group", group.id] }, { label: subject.name, path: ["group", group.id, "subject", subject.id] }])}${intro(`${group.name} · дисциплина`, subject.name, "Темы курса расположены в порядке изучения.")}<div class="list">${subject.topics.map((topic, index) => `<a class="list-link" href="${href(["group", group.id, "subject", subject.id, "topic", topic.id])}"><span class="topic-number">${String(index + 1).padStart(2, "0")}</span><span class="row-copy"><strong>${escapeHTML(topic.name)}</strong><small>${topic.materials.map((id) => findById(catalogue.materials, id)).filter(Boolean).map((material) => typeNames[material.type] || "Материал").join(" · ")}</small></span><span class="arrow" aria-hidden="true">→</span></a>`).join("")}</div><p class="course-note">Весь курс открыт для просмотра.</p>`;
-  document.title = `${subject.name} — Electrobaza`;
+  const topics = subject.topics.length
+    ? `<div class="list">${subject.topics.map((topic, index) => `<a class="list-link" href="${href(["group", group.id, "subject", subject.id, "topic", topic.id])}"><span class="topic-number">${String(index + 1).padStart(2, "0")}</span><span class="row-copy"><strong>${escapeHTML(topic.name)}</strong><small>${topic.materials.map((id) => findById(catalogue.materials, id)).filter(Boolean).map((material) => typeNames[material.type] || "Материал").join(" · ")}</small></span><span class="arrow" aria-hidden="true">→</span></a>`).join("")}</div><p class="course-note">Весь курс открыт для просмотра.</p>`
+    : `<p class="course-note">Темы и материалы по этой дисциплине будут добавлены позже.</p>`;
+  main.innerHTML = `${breadcrumb([{ label: "Группы", path: [] }, { label: group.name, path: ["group", group.id] }, { label: subject.name, path: ["group", group.id, "subject", subject.id] }])}${intro(`${group.name} · дисциплина`, subject.name, "Темы курса расположены в порядке изучения.")}${topics}`;
+  document.title = `${subject.name} — Электробаза`;
 }
 
 function topicPage(groupId, subjectId, topicId) {
@@ -53,33 +73,31 @@ function topicPage(groupId, subjectId, topicId) {
   const topicIndex = subject.topics.findIndex((item) => item.id === topic.id);
   const materials = topic.materials.map((id) => findById(catalogue.materials, id)).filter(Boolean);
   main.innerHTML = `${breadcrumb([{ label: "Группы", path: [] }, { label: group.name, path: ["group", group.id] }, { label: subject.name, path: ["group", group.id, "subject", subject.id] }, { label: topic.name, path: ["group", group.id, "subject", subject.id, "topic", topic.id] }])}${intro(`${subject.name} · тема ${topicIndex + 1}`, topic.name, "Материалы к занятию.")}<div class="list">${materials.map((material) => `<a class="list-link" href="${href(["material", group.id, subject.id, topic.id, material.id])}"><span class="row-icon" aria-hidden="true">${escapeHTML(typeMarks[material.type] || "М")}</span><span class="row-copy"><strong>${escapeHTML(material.name)}</strong><small>${escapeHTML(material.description || typeNames[material.type] || "Учебный материал")}</small></span><span class="arrow" aria-hidden="true">→</span></a>`).join("")}</div>`;
-  document.title = `${topic.name} — Electrobaza`;
+  document.title = `${topic.name} — Электробаза`;
 }
 
-async function materialPage(groupId, subjectId, topicId, materialId) {
+function materialPage(groupId, subjectId, topicId, materialId) {
   const group = findById(catalogue.groups, groupId);
   const subject = findById(catalogue.disciplines, subjectId);
   const topic = subject && findById(subject.topics, topicId);
   const material = topic && topic.materials.includes(materialId) && findById(catalogue.materials, materialId);
   if (!group || !subject || !group.disciplines.includes(subject.id) || !topic || !material) return notFound();
   main.innerHTML = `${breadcrumb([{ label: "Группы", path: [] }, { label: group.name, path: ["group", group.id] }, { label: subject.name, path: ["group", group.id, "subject", subject.id] }, { label: topic.name, path: ["group", group.id, "subject", subject.id, "topic", topic.id] }, { label: material.name, path: ["material", group.id, subject.id, topic.id, material.id] }])}${intro(typeNames[material.type] || "Материал", topic.name, material.description || "")}<div class="reader-layout"><div class="reader-tools"><p>Чтение с телефона и компьютера</p><button type="button" class="text-size-button" id="text-size" aria-label="Увеличить размер текста">Размер текста: ${readingSize}px +</button></div><article class="material-reader" id="reader" aria-live="polite"><p class="loading">Открываем материал…</p></article><div class="pager" id="slide-controls" hidden><button type="button" class="button button-outline" id="slide-prev">← Назад</button><button type="button" class="button" id="slide-next">Далее →</button></div></div><p class="course-note"><a href="${href(["group", group.id, "subject", subject.id, "topic", topic.id])}">← Вернуться ко всем материалам темы</a></p>`;
-  document.title = `${material.name}: ${topic.name} — Electrobaza`;
+  document.title = `${material.name}: ${topic.name} — Электробаза`;
   document.querySelector("#text-size").addEventListener("click", () => {
     readingSize = readingSize >= 22 ? 17 : readingSize + 1;
-    localStorage.setItem("electrobaza-reading-size", String(readingSize));
+    storage.setItem("electrobaza-reading-size", String(readingSize));
     document.querySelector("#reader").style.setProperty("--reading-size", `${readingSize}px`);
     document.querySelector("#text-size").textContent = `Размер текста: ${readingSize}px +`;
   });
-  try {
-    const response = await fetch(material.file);
-    if (!response.ok) throw new Error(`Не удалось открыть файл: ${response.status}`);
-    document.querySelector("#reader").innerHTML = await response.text();
-    document.querySelector("#reader").style.setProperty("--reading-size", `${readingSize}px`);
-    if (material.type === "slides") setupSlides();
-  } catch (error) {
+  const content = materialContent[material.id];
+  if (typeof content !== "string") {
     document.querySelector("#reader").innerHTML = `<p class="error">Материал пока недоступен. Обновите страницу немного позже.</p>`;
-    console.error(error);
+    return;
   }
+  document.querySelector("#reader").innerHTML = content;
+  document.querySelector("#reader").style.setProperty("--reading-size", `${readingSize}px`);
+  if (material.type === "slides") setupSlides();
 }
 
 function setupSlides() {
@@ -105,7 +123,7 @@ function setupSlides() {
 
 function notFound() {
   main.innerHTML = `${breadcrumb([{ label: "Группы", path: [] }, { label: "Материал не найден", path: ["not-found"] }])}<div class="intro"><span class="eyebrow">Такой страницы нет</span><h1>Материал не найден</h1><p>Возможно, ссылка устарела. Вернитесь к списку групп.</p></div><a class="button" href="#/">К группам</a>`;
-  document.title = "Материал не найден — Electrobaza";
+  document.title = "Материал не найден — Электробаза";
 }
 
 function render() {
@@ -118,17 +136,15 @@ function render() {
   return notFound();
 }
 
-async function start() {
-  try {
-    const response = await fetch("materials.json");
-    if (!response.ok) throw new Error(`Не удалось загрузить каталог: ${response.status}`);
-    catalogue = await response.json();
-    window.addEventListener("hashchange", render);
-    render();
-  } catch (error) {
-    main.innerHTML = `<p class="error">Не удалось загрузить список материалов. Проверьте, что сайт открыт по ссылке GitHub Pages.</p>`;
-    console.error(error);
+function start() {
+  catalogue = window.ELECTROBAZA_CATALOG;
+  materialContent = window.ELECTROBAZA_CONTENT;
+  if (!catalogue || !materialContent) {
+    main.innerHTML = `<p class="error">Не найден каталог сайта. Запустите build-catalogue.cmd и откройте index.html заново.</p>`;
+    return;
   }
+  window.addEventListener("hashchange", render);
+  render();
 }
 
 start();

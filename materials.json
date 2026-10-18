@@ -1,11 +1,10 @@
 {
   "currentTopic": "ohms-law",
   "groups": [
-    {"id":"1me-25","name":"1МЭ-25","disciplines":["electrical-engineering"]},
-    {"id":"1eo-25","name":"1ЭО-25","disciplines":["electrical-engineering","electrical-materials"]},
-    {"id":"1eo-24","name":"1ЭО-24","disciplines":["electrical-engineering","electrical-materials"]},
-    {"id":"1a-25","name":"1А-25","disciplines":["electrical-engineering"]},
-    {"id":"3a-26-11","name":"3А-26/11","disciplines":["electrical-engineering"]}
+    {"id":"1me-25","name":"1МЭ-25","disciplines":["mdk-05-01","mdk-05-02"]},
+    {"id":"1eo-25","name":"1ЭО-25","disciplines":["mdk-04-01","mdk-04-02"]},
+    {"id":"1eo-24","name":"1ЭО-24","disciplines":["mdk-04-02","op-08","op-12"]},
+    {"id":"1a-25-3a-26-11","name":"1А-25 и 3А-26/11","disciplines":["op-03"]}
   ],
   "disciplines": [
     {
@@ -25,6 +24,41 @@
         {"id":"conductors","name":"Свойства проводников","materials":["conductors-lecture"]},
         {"id":"insulation","name":"Выбор изоляции","materials":["insulation-lecture"]}
       ]
+    },
+    {
+      "id":"mdk-05-01",
+      "name":"МДК 05.01 Основы слесарно-сборочных и электромонтажных работ",
+      "topics":[]
+    },
+    {
+      "id":"mdk-05-02",
+      "name":"МДК 05.02 Организация и выполнение работ по сборке и монтажу электрооборудования и распределительных устройств",
+      "topics":[]
+    },
+    {
+      "id":"mdk-04-02",
+      "name":"МДК 04.02 Организация работ по сборке, монтажу и ремонту электрооборудования",
+      "topics":[]
+    },
+    {
+      "id":"mdk-04-01",
+      "name":"МДК 04.01 Основы слесарно-сборочных и электромонтажных работ",
+      "topics":[]
+    },
+    {
+      "id":"op-08",
+      "name":"ОП.08 Информационные технологии в профессиональной деятельности",
+      "topics":[]
+    },
+    {
+      "id":"op-12",
+      "name":"ОП.12 Правовые основы профессиональной деятельности",
+      "topics":[]
+    },
+    {
+      "id":"op-03",
+      "name":"ОП.03 Электротехника и электроника",
+      "topics":[]
     }
   ],
   "materials": [
