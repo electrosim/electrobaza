@@ -28,7 +28,7 @@ Double-click `index.html` for a simple local preview. After changing `materials.
 
 ## Add a material
 
-For the detailed Russian step-by-step guide with lecture and practical-work templates, see [ИНСТРУКЦИЯ_ПО_ДОБАВЛЕНИЮ_МАТЕРИАЛОВ.md](ИНСТРУКЦИЯ_ПО_ДОБАВЛЕНИЮ_МАТЕРИАЛОВ.md).
+For the detailed Russian step-by-step guide with lecture and practical-work templates, see [ИНСТРУКЦИЯ_ПО_ДОБАВЛЕНИЮ_МАТЕРИАЛОВ.md](ИНСТРУКЦИЯ_ПО_ДОБАВЛЕНИЮ_МАТЕРИАЛОВ.md). Content, volume and formatting agreements are collected in [ПРАВИЛА_ДОБАВЛЕНИЯ.md](ПРАВИЛА_ДОБАВЛЕНИЯ.md); before every new lecture the author is asked about its volume, content, required calculations, graphs and other details.
 
 1. Create an HTML file in `content/`, such as `content/new-lesson.html`. Add only lesson content: headings, paragraphs, lists, images, and formulas.
 2. Add an entry to the `materials` array in `materials.json`. For example:

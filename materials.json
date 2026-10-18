@@ -55,7 +55,13 @@
       "id":"op-12",
       "name":"ОП.12 Правовые основы профессиональной деятельности",
       "contentPath":"groups/1eo-24/op-12",
-      "topics":[]
+      "topics":[
+        {
+          "id":"constitutional-system",
+          "name":"Конституционный строй: форма правления, форма государственного устройства и политический режим",
+          "materials":["constitutional-system-lecture"]
+        }
+      ]
     },
     {
       "id":"op-03",
@@ -78,6 +84,13 @@
       "name":"Практическая работа",
       "description":"Расчёт параметров схемы с расцепителем минимального напряжения и датчиком освещённости",
       "file":"content/groups/1eo-24/mdk-04-02/semester-3/undervoltage-release-light-sensor/Практическая работа.html"
+    },
+    {
+      "id":"constitutional-system-lecture",
+      "type":"lecture",
+      "name":"Лекция",
+      "description":"Конституционный строй: форма правления, форма государственного устройства и политический режим",
+      "file":"content/groups/1eo-24/op-12/constitutional-system/Лекция.html"
     }
   ]
 }

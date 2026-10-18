@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="420" viewBox="0 0 600 420" role="img" aria-labelledby="t d">
+  <title id="t">Три характеристики формы государства</title>
+  <desc id="d">Схема: форма государства включает форму правления, форму государственного устройства и политический режим.</desc>
+  <rect width="600" height="420" fill="#ffffff"/>
+  <rect x="200" y="10" width="200" height="50" rx="10" fill="#eaf2ec" stroke="#7d8f83" stroke-width="1.5"/>
+  <text x="300" y="43" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#1c3d2d">Форма государства</text>
+  <g stroke="#7d8f83" stroke-width="1.5" fill="none">
+    <line x1="300" y1="60" x2="300" y2="80"/>
+    <line x1="100" y1="80" x2="500" y2="80"/>
+    <line x1="100" y1="80" x2="100" y2="100"/>
+    <line x1="300" y1="80" x2="300" y2="100"/>
+    <line x1="500" y1="80" x2="500" y2="100"/>
+  </g>
+
+  <rect x="10" y="100" width="180" height="280" rx="10" fill="#fbfdfb" stroke="#dbe4dc" stroke-width="1.5"/>
+  <text x="100" y="135" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#1f6b4a">Форма правления</text>
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="20" fill="#2b3a31">
+    <text x="25" y="190">Монархия</text>
+    <text x="25" y="225">Республика:</text>
+    <text x="25" y="260">• президентская</text>
+    <text x="25" y="292">• парламентская</text>
+    <text x="25" y="324">• смешанная</text>
+  </g>
+
+  <rect x="210" y="100" width="180" height="280" rx="10" fill="#fbfdfb" stroke="#dbe4dc" stroke-width="1.5"/>
+  <text x="300" y="130" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#1f6b4a">Форма</text>
+  <text x="300" y="156" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#1f6b4a">устройства</text>
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="20" fill="#2b3a31">
+    <text x="225" y="205">Унитарное</text>
+    <text x="225" y="240">Федерация</text>
+    <text x="225" y="275">Конфедерация</text>
+  </g>
+
+  <rect x="410" y="100" width="180" height="280" rx="10" fill="#fbfdfb" stroke="#dbe4dc" stroke-width="1.5"/>
+  <text x="500" y="130" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#1f6b4a">Политический</text>
+  <text x="500" y="156" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#1f6b4a">режим</text>
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="20" fill="#2b3a31">
+    <text x="425" y="205">Демократический</text>
+    <text x="425" y="240">Авторитарный</text>
+    <text x="425" y="275">Тоталитарный</text>
+  </g>
+
+  <text x="300" y="407" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-style="italic" fill="#5c6f63">Три характеристики взаимосвязаны</text>
+</svg>
