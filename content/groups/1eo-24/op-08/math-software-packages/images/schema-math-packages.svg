@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520" viewBox="0 0 1000 520" role="img" aria-labelledby="t d">
+  <title id="t">Классификация пакетов прикладных программ для математических расчётов</title>
+  <desc id="d">Схема делит пакеты на универсальные, табличные, среды программирования и специализированные инженерные программы.</desc>
+  <rect width="1000" height="520" fill="#ffffff"/>
+  <rect x="330" y="15" width="340" height="55" rx="10" fill="#eaf2ec" stroke="#7d8f83" stroke-width="1.5"/>
+  <text x="500" y="51" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#1c3d2d">Пакеты прикладных программ</text>
+  <g stroke="#7d8f83" stroke-width="1.5" fill="none">
+    <line x1="500" y1="70" x2="500" y2="95"/>
+    <line x1="120" y1="95" x2="880" y2="95"/>
+    <line x1="120" y1="95" x2="120" y2="120"/>
+    <line x1="373" y1="95" x2="373" y2="120"/>
+    <line x1="626" y1="95" x2="626" y2="120"/>
+    <line x1="879" y1="95" x2="879" y2="120"/>
+  </g>
+
+  <rect x="20" y="120" width="210" height="300" rx="10" fill="#fbfdfb" stroke="#dbe4dc" stroke-width="1.5"/>
+  <text x="125" y="157" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#1f6b4a">Универсальные</text>
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="20" fill="#2b3a31">
+    <text x="38" y="215">MathCAD</text>
+    <text x="38" y="250">MATLAB</text>
+    <text x="38" y="285">Mathematica</text>
+    <text x="38" y="355" font-size="18" font-style="italic" fill="#5c6f63">символьные расчёты</text>
+  </g>
+
+  <rect x="263" y="120" width="210" height="300" rx="10" fill="#fbfdfb" stroke="#dbe4dc" stroke-width="1.5"/>
+  <text x="368" y="157" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#1f6b4a">Табличные</text>
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="20" fill="#2b3a31">
+    <text x="281" y="215">Excel</text>
+    <text x="281" y="250">LibreOffice Calc</text>
+    <text x="281" y="355" font-size="18" font-style="italic" fill="#5c6f63">формулы и диаграммы</text>
+  </g>
+
+  <rect x="506" y="120" width="210" height="300" rx="10" fill="#fbfdfb" stroke="#dbe4dc" stroke-width="1.5"/>
+  <text x="611" y="157" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#1f6b4a">Программирование</text>
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="20" fill="#2b3a31">
+    <text x="524" y="215">Python</text>
+    <text x="524" y="250">R</text>
+    <text x="524" y="285">NumPy, SciPy</text>
+    <text x="524" y="355" font-size="18" font-style="italic" fill="#5c6f63">библиотеки и сценарии</text>
+  </g>
+
+  <rect x="749" y="120" width="231" height="300" rx="10" fill="#fbfdfb" stroke="#dbe4dc" stroke-width="1.5"/>
+  <text x="864" y="157" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#1f6b4a">Специализированные</text>
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="20" fill="#2b3a31">
+    <text x="767" y="215">CAD/CAE</text>
+    <text x="767" y="250">«Электрик»</text>
+    <text x="767" y="355" font-size="18" font-style="italic" fill="#5c6f63">готовые методики</text>
+  </g>
+
+  <text x="500" y="492" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-style="italic" fill="#5c6f63">Выбор зависит от задачи, точности и требуемого оформления</text>
+</svg>

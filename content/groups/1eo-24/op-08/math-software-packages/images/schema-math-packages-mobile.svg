@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="720" viewBox="0 0 600 720" role="img" aria-labelledby="t d">
+  <title id="t">Классификация пакетов прикладных программ для математических расчётов</title>
+  <desc id="d">Схема делит пакеты на универсальные, табличные, среды программирования и специализированные инженерные программы.</desc>
+  <rect width="600" height="720" fill="#ffffff"/>
+  <rect x="150" y="8" width="300" height="52" rx="10" fill="#eaf2ec" stroke="#7d8f83" stroke-width="1.5"/>
+  <text x="300" y="42" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#1c3d2d">Пакеты прикладных программ</text>
+  <line x1="300" y1="60" x2="300" y2="88" stroke="#7d8f83" stroke-width="1.5"/>
+
+  <rect x="30" y="88" width="540" height="130" rx="10" fill="#fbfdfb" stroke="#dbe4dc" stroke-width="1.5"/>
+  <text x="50" y="123" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#1f6b4a">Универсальные</text>
+  <text x="50" y="160" font-family="Segoe UI, Arial, sans-serif" font-size="22" fill="#2b3a31">MathCAD · MATLAB · Mathematica</text>
+  <text x="50" y="194" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#5c6f63">символьные и численные расчёты</text>
+
+  <rect x="30" y="238" width="540" height="130" rx="10" fill="#fbfdfb" stroke="#dbe4dc" stroke-width="1.5"/>
+  <text x="50" y="273" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#1f6b4a">Табличные</text>
+  <text x="50" y="310" font-family="Segoe UI, Arial, sans-serif" font-size="22" fill="#2b3a31">Excel · LibreOffice Calc</text>
+  <text x="50" y="344" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#5c6f63">формулы, диаграммы, массовые расчёты</text>
+
+  <rect x="30" y="388" width="540" height="130" rx="10" fill="#fbfdfb" stroke="#dbe4dc" stroke-width="1.5"/>
+  <text x="50" y="423" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#1f6b4a">Программирование</text>
+  <text x="50" y="460" font-family="Segoe UI, Arial, sans-serif" font-size="22" fill="#2b3a31">Python · R · NumPy, SciPy</text>
+  <text x="50" y="494" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#5c6f63">гибкие сценарии и повторяемые расчёты</text>
+
+  <rect x="30" y="538" width="540" height="130" rx="10" fill="#fbfdfb" stroke="#dbe4dc" stroke-width="1.5"/>
+  <text x="50" y="573" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#1f6b4a">Специализированные</text>
+  <text x="50" y="610" font-family="Segoe UI, Arial, sans-serif" font-size="22" fill="#2b3a31">CAD/CAE · «Электрик»</text>
+  <text x="50" y="644" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#5c6f63">готовые методики для узких задач</text>
+
+  <text x="300" y="705" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-style="italic" fill="#5c6f63">Выбор зависит от задачи и точности</text>
+</svg>

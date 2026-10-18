@@ -49,7 +49,13 @@
       "id":"op-08",
       "name":"ОП.08 Информационные технологии в профессиональной деятельности",
       "contentPath":"groups/1eo-24/op-08",
-      "topics":[]
+      "topics":[
+        {
+          "id":"math-software-packages",
+          "name":"Общая характеристика пакетов прикладных программ для математических расчётов",
+          "materials":["math-software-packages-lecture"]
+        }
+      ]
     },
     {
       "id":"op-12",
@@ -91,6 +97,13 @@
       "name":"Лекция",
       "description":"Конституционный строй: форма правления, форма государственного устройства и политический режим",
       "file":"content/groups/1eo-24/op-12/constitutional-system/Лекция.html"
+    },
+    {
+      "id":"math-software-packages-lecture",
+      "type":"lecture",
+      "name":"Лекция",
+      "description":"Общая характеристика пакетов прикладных программ для математических расчётов",
+      "file":"content/groups/1eo-24/op-08/math-software-packages/Лекция.html"
     }
   ]
 }
