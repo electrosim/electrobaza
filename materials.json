@@ -1,74 +1,76 @@
 {
-  "currentTopic": "ohms-law",
+  "currentTopic": null,
   "groups": [
-    {"id":"1me-25","name":"1МЭ-25","disciplines":["mdk-05-01","mdk-05-02"]},
-    {"id":"1eo-25","name":"1ЭО-25","disciplines":["mdk-04-01","mdk-04-02"]},
-    {"id":"1eo-24","name":"1ЭО-24","disciplines":["mdk-04-02","op-08","op-12"]},
-    {"id":"1a-25-3a-26-11","name":"1А-25 и 3А-26/11","disciplines":["op-03"]}
+    {"id":"1me-25","name":"1МЭ-25","mark":"МЭ","disciplines":["mdk-05-01","mdk-05-02"]},
+    {"id":"1eo-25","name":"1ЭО-25","mark":"ЭО","disciplines":["mdk-04-01","mdk-04-02-1eo-25-s1"]},
+    {"id":"1eo-24","name":"1ЭО-24","mark":"ЭО","disciplines":["mdk-04-02-1eo-24-s3","op-08","op-12"]},
+    {"id":"1a-25-3a-26-11","name":"1А-25 и 3А-26/11","mark":"А","disciplines":["op-03"]}
   ],
   "disciplines": [
     {
-      "id":"electrical-engineering",
-      "name":"Электротехника",
-      "topics":[
-        {"id":"electrical-quantities","name":"Электрические величины","materials":["quantities-lecture"]},
-        {"id":"ohms-law","name":"Закон Ома для участка цепи","materials":["ohms-lecture","ohms-practice","ohms-slides"]},
-        {"id":"resistors","name":"Соединение резисторов","materials":["resistors-lecture"]}
-      ]
-    },
-    {
-      "id":"electrical-materials",
-      "name":"Электротехнические материалы",
-      "topics":[
-        {"id":"conductors-insulators","name":"Проводники и диэлектрики","materials":["materials-lecture"]},
-        {"id":"conductors","name":"Свойства проводников","materials":["conductors-lecture"]},
-        {"id":"insulation","name":"Выбор изоляции","materials":["insulation-lecture"]}
-      ]
-    },
-    {
       "id":"mdk-05-01",
       "name":"МДК 05.01 Основы слесарно-сборочных и электромонтажных работ",
+      "contentPath":"groups/1me-25/mdk-05-01",
       "topics":[]
     },
     {
       "id":"mdk-05-02",
       "name":"МДК 05.02 Организация и выполнение работ по сборке и монтажу электрооборудования и распределительных устройств",
+      "contentPath":"groups/1me-25/mdk-05-02",
       "topics":[]
     },
     {
-      "id":"mdk-04-02",
+      "id":"mdk-04-02-1eo-25-s1",
       "name":"МДК 04.02 Организация работ по сборке, монтажу и ремонту электрооборудования",
+      "semester":1,
+      "contentPath":"groups/1eo-25/mdk-04-02/semester-1",
       "topics":[]
+    },
+    {
+      "id":"mdk-04-02-1eo-24-s3",
+      "name":"МДК 04.02 Организация работ по сборке, монтажу и ремонту электрооборудования",
+      "semester":3,
+      "contentPath":"groups/1eo-24/mdk-04-02/semester-3",
+      "topics":[
+        {
+          "id":"undervoltage-release-light-sensor",
+          "name":"Монтаж, наладка и ремонт схемы, содержащей расцепитель минимального напряжения и датчик освещённости",
+          "materials":["undervoltage-release-light-sensor-practice"]
+        }
+      ]
     },
     {
       "id":"mdk-04-01",
       "name":"МДК 04.01 Основы слесарно-сборочных и электромонтажных работ",
+      "contentPath":"groups/1eo-25/mdk-04-01",
       "topics":[]
     },
     {
       "id":"op-08",
       "name":"ОП.08 Информационные технологии в профессиональной деятельности",
+      "contentPath":"groups/1eo-24/op-08",
       "topics":[]
     },
     {
       "id":"op-12",
       "name":"ОП.12 Правовые основы профессиональной деятельности",
+      "contentPath":"groups/1eo-24/op-12",
       "topics":[]
     },
     {
       "id":"op-03",
       "name":"ОП.03 Электротехника и электроника",
+      "contentPath":"groups/1a-25-3a-26-11/op-03",
       "topics":[]
     }
   ],
   "materials": [
-    {"id":"quantities-lecture","type":"lecture","name":"Лекция","description":"Основные электрические величины","file":"content/electrical-quantities.html"},
-    {"id":"ohms-lecture","type":"lecture","name":"Лекция","description":"Текст для чтения на телефоне","file":"content/ohms-law.html"},
-    {"id":"ohms-practice","type":"practice","name":"Практическая работа","description":"Три расчётные задачи с оформлением решения","file":"content/ohms-practice.html"},
-    {"id":"ohms-slides","type":"slides","name":"Презентация","description":"Короткие слайды для занятия и телефона","file":"content/ohms-slides.html"},
-    {"id":"resistors-lecture","type":"lecture","name":"Лекция","description":"Последовательное и параллельное соединение","file":"content/resistors.html"},
-    {"id":"materials-lecture","type":"lecture","name":"Лекция","description":"Материалы, которые проводят и не проводят ток","file":"content/electrical-materials.html"},
-    {"id":"conductors-lecture","type":"lecture","name":"Лекция","description":"Основные свойства проводников","file":"content/conductors.html"},
-    {"id":"insulation-lecture","type":"lecture","name":"Лекция","description":"Критерии выбора изоляционного материала","file":"content/insulation.html"}
+    {
+      "id":"undervoltage-release-light-sensor-practice",
+      "type":"practice",
+      "name":"Практическая работа",
+      "description":"Монтаж, наладка и ремонт схемы с расцепителем минимального напряжения и датчиком освещённости",
+      "file":"content/groups/1eo-24/mdk-04-02/semester-3/undervoltage-release-light-sensor/practical.html"
+    }
   ]
 }

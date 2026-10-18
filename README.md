@@ -32,7 +32,7 @@ Double-click `index.html` for a simple local preview. After changing `materials.
 2. Add an entry to the `materials` array in `materials.json`. For example:
 
    ```json
-   {"id":"new-lesson","type":"lecture","name":"Лекция","description":"Краткое описание","file":"content/new-lesson.html"}
+   {"id":"new-lesson","type":"lecture","name":"Лекция","description":"Краткое описание","file":"content/groups/1eo-25/mdk-04-02/semester-1/<topic-id>/new-lesson.html"}
    ```
 
 3. Add the material ID to the `materials` list of the relevant topic.
@@ -44,4 +44,4 @@ Supported types are `lecture`, `practice`, `lab`, `slides`, and `file`. The cata
 
 ## Reading and media
 
-HTML fragments are displayed inside the same responsive reader and use the site's common typography. The default text is large and can be increased by the reader. Store images in `content/` and reference them with a relative path, for example `<img src="content/scheme.png" alt="Электрическая схема">`.
+HTML fragments are displayed inside the same responsive reader and use the site's common typography. The default text is large and can be increased by the reader. Store course material under `content/groups/<group-id>/<discipline-id>/<topic-id>/`; add a `semester-<number>/` folder inside a discipline when that group's course variant depends on the semester. Keep images beside the material and reference them with a relative path.

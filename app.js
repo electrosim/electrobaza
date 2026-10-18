@@ -38,7 +38,7 @@ function intro(eyebrow, title, subtitle = "") {
 function groupPage() {
   main.innerHTML = `${intro("", "Материалы к занятиям")}<div class="group-grid">${catalogue.groups.map((group) => {
     const subjects = group.disciplines.map((id) => findById(catalogue.disciplines, id)).filter(Boolean);
-    return `<a class="group-card" href="${href(["group", group.id])}"><span class="group-icon" aria-hidden="true">E</span><span class="card-copy"><strong>${escapeHTML(group.name)}</strong><small>${subjects.length} ${subjects.length === 1 ? "дисциплина" : "дисциплины"} · открыть материалы</small></span><span class="arrow" aria-hidden="true">→</span></a>`;
+    return `<a class="group-card" href="${href(["group", group.id])}"><span class="group-icon" aria-hidden="true">${escapeHTML(group.mark || "")}</span><span class="card-copy"><strong>${escapeHTML(group.name)}</strong><small>${subjects.length} ${subjects.length === 1 ? "дисциплина" : "дисциплины"} · открыть материалы</small></span><span class="arrow" aria-hidden="true">→</span></a>`;
   }).join("")}</div>`;
   document.title = "Электробаза — учебные материалы";
 }
@@ -50,7 +50,7 @@ function groupPageById(groupId) {
   const currentSubject = subjects.find((subject) => subject.topics.some((topic) => topic.id === catalogue.currentTopic));
   const currentTopic = currentSubject?.topics.find((topic) => topic.id === catalogue.currentTopic);
   const current = currentTopic ? `<section class="current-callout" aria-label="Материал текущей пары"><div><span class="eyebrow">На текущую пару</span><h2>${escapeHTML(currentTopic.name)}</h2><p>${escapeHTML(currentSubject.name)} · открыть материал</p></div><a class="button button-light" href="${href(["group", group.id, "subject", currentSubject.id, "topic", currentTopic.id])}">Открыть тему →</a></section>` : "";
-  main.innerHTML = `${breadcrumb([{ label: "Группы", path: [] }, { label: group.name, path: ["group", group.id] }])}${intro("Ваша группа", group.name, "Выберите дисциплину.")}${current}<h2 class="section-heading">Дисциплины</h2><div class="list">${subjects.map((subject) => `<a class="list-link" href="${href(["group", group.id, "subject", subject.id])}"><span class="row-icon" aria-hidden="true">EE</span><span class="row-copy"><strong>${escapeHTML(subject.name)}</strong><small>${subject.topics.length ? `${subject.topics.length} ${subject.topics.length === 1 ? "тема" : "темы"} · весь курс` : "Темы скоро появятся"}</small></span><span class="arrow" aria-hidden="true">→</span></a>`).join("")}</div>`;
+  main.innerHTML = `${breadcrumb([{ label: "Группы", path: [] }, { label: group.name, path: ["group", group.id] }])}${intro("Ваша группа", group.name, "Выберите дисциплину.")}${current}<h2 class="section-heading">Дисциплины</h2><div class="list">${subjects.map((subject) => `<a class="list-link" href="${href(["group", group.id, "subject", subject.id])}"><span class="row-icon" aria-hidden="true">EE</span><span class="row-copy"><strong>${escapeHTML(subject.name)}</strong><small>${subject.semester ? `${subject.semester}-й семестр · ` : ""}${subject.topics.length ? `${subject.topics.length} ${subject.topics.length === 1 ? "тема" : "темы"} · весь курс` : "Темы скоро появятся"}</small></span><span class="arrow" aria-hidden="true">→</span></a>`).join("")}</div>`;
     document.title = `${group.name} — Электробаза`;
 }
 
@@ -61,7 +61,7 @@ function subjectPage(groupId, subjectId) {
   const topics = subject.topics.length
     ? `<div class="list">${subject.topics.map((topic, index) => `<a class="list-link" href="${href(["group", group.id, "subject", subject.id, "topic", topic.id])}"><span class="topic-number">${String(index + 1).padStart(2, "0")}</span><span class="row-copy"><strong>${escapeHTML(topic.name)}</strong><small>${topic.materials.map((id) => findById(catalogue.materials, id)).filter(Boolean).map((material) => typeNames[material.type] || "Материал").join(" · ")}</small></span><span class="arrow" aria-hidden="true">→</span></a>`).join("")}</div><p class="course-note">Весь курс открыт для просмотра.</p>`
     : `<p class="course-note">Темы и материалы по этой дисциплине будут добавлены позже.</p>`;
-  main.innerHTML = `${breadcrumb([{ label: "Группы", path: [] }, { label: group.name, path: ["group", group.id] }, { label: subject.name, path: ["group", group.id, "subject", subject.id] }])}${intro(`${group.name} · дисциплина`, subject.name, "Темы курса расположены в порядке изучения.")}${topics}`;
+  main.innerHTML = `${breadcrumb([{ label: "Группы", path: [] }, { label: group.name, path: ["group", group.id] }, { label: subject.name, path: ["group", group.id, "subject", subject.id] }])}${intro(`${group.name} · дисциплина${subject.semester ? ` · ${subject.semester}-й семестр` : ""}`, subject.name, "Темы курса расположены в порядке изучения.")}${topics}`;
   document.title = `${subject.name} — Электробаза`;
 }
 
