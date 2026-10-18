@@ -1,8 +1,11 @@
 {
   "currentTopic": "ohms-law",
   "groups": [
-    {"id":"1m1-25","name":"1М1-25","disciplines":["electrical-engineering"]},
-    {"id":"1eo-25","name":"1ЭО-25","disciplines":["electrical-engineering","electrical-materials"]}
+    {"id":"1me-25","name":"1МЭ-25","disciplines":["electrical-engineering"]},
+    {"id":"1eo-25","name":"1ЭО-25","disciplines":["electrical-engineering","electrical-materials"]},
+    {"id":"1eo-24","name":"1ЭО-24","disciplines":["electrical-engineering","electrical-materials"]},
+    {"id":"1a-25","name":"1А-25","disciplines":["electrical-engineering"]},
+    {"id":"3a-26-11","name":"3А-26/11","disciplines":["electrical-engineering"]}
   ],
   "disciplines": [
     {
