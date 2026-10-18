@@ -69,15 +69,15 @@
       "id":"undervoltage-release-light-sensor-lecture",
       "type":"lecture",
       "name":"Лекция",
-      "description":"Краткая лекция: расчёт схемы с расцепителем минимального напряжения и датчиком освещённости",
-      "file":"content/groups/1eo-24/mdk-04-02/semester-3/undervoltage-release-light-sensor/lecture.html"
+      "description":"Расцепитель минимального напряжения: устройство, уставки, применение и расчёт",
+      "file":"content/groups/1eo-24/mdk-04-02/semester-3/undervoltage-release-light-sensor/Лекция (расцепитель).html"
     },
     {
       "id":"undervoltage-release-light-sensor-practice",
       "type":"practice",
       "name":"Практическая работа",
       "description":"Расчёт параметров схемы с расцепителем минимального напряжения и датчиком освещённости",
-      "file":"content/groups/1eo-24/mdk-04-02/semester-3/undervoltage-release-light-sensor/practical.html"
+      "file":"content/groups/1eo-24/mdk-04-02/semester-3/undervoltage-release-light-sensor/Практическая работа.html"
     }
   ]
 }
