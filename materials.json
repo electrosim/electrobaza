@@ -69,7 +69,7 @@
       "id":"undervoltage-release-light-sensor-practice",
       "type":"practice",
       "name":"Практическая работа",
-      "description":"Расчёт параметров, монтаж и проверка схемы с расцепителем минимального напряжения и датчиком освещённости",
+      "description":"Расчёт параметров схемы с расцепителем минимального напряжения и датчиком освещённости",
       "file":"content/groups/1eo-24/mdk-04-02/semester-3/undervoltage-release-light-sensor/practical.html"
     }
   ]
