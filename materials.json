@@ -30,7 +30,13 @@
       "name":"МДК 04.02 Организация работ по сборке, монтажу и ремонту электрооборудования",
       "semester":1,
       "contentPath":"groups/1eo-25/mdk-04-02/semester-1",
-      "topics":[]
+      "topics":[
+        {
+          "id":"light-sources-luminaires",
+          "name":"Электрические источники света. Осветительная арматура",
+          "materials":["light-sources-luminaires-lecture"]
+        }
+      ]
     },
     {
       "id":"mdk-04-02-1eo-24-s3",
@@ -117,6 +123,13 @@
       "name":"Практическая работа",
       "description":"Подключение выключателей и розеток: схемы и технологические карты",
       "file":"content/groups/1me-25/mdk-05-02/switch-socket-connection/Практическая работа.html"
+    },
+    {
+      "id":"light-sources-luminaires-lecture",
+      "type":"lecture",
+      "name":"Лекция",
+      "description":"Электрические источники света. Осветительная арматура",
+      "file":"content/groups/1eo-25/mdk-04-02/semester-1/light-sources-luminaires/Лекция.html"
     }
   ]
 }
