@@ -39,7 +39,7 @@ function groupPage() {
   main.innerHTML = `${intro("", "Материалы к занятиям")}<div class="group-grid">${catalogue.groups.map((group) => {
     const subjects = group.disciplines.map((id) => findById(catalogue.disciplines, id)).filter(Boolean);
     return `<a class="group-card" href="${href(["group", group.id])}"><span class="group-icon" aria-hidden="true">${escapeHTML(group.mark || "")}</span><span class="card-copy"><strong>${escapeHTML(group.name)}</strong><small>${subjects.length} ${subjects.length === 1 ? "дисциплина" : "дисциплины"} · открыть материалы</small></span><span class="arrow" aria-hidden="true">→</span></a>`;
-  }).join("")}</div>`;
+  }).join("")}</div><a class="trainer-card" href="https://electrosim.github.io/" target="_blank" rel="noopener noreferrer" aria-label="Открыть тренажёр электромонтажа на electrosim.github.io в новой вкладке"><span class="trainer-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="23" height="23" focusable="false"><path fill="currentColor" d="M14.2 1.5 4.9 13h5.8l-.8 9.5L19.1 11h-5.8l.9-9.5Z"/></svg></span><span class="trainer-copy"><strong>Тренажёр электромонтажа</strong><small>Интерактивная практика в браузере · electrosim.github.io</small></span><span class="trainer-action">Открыть <span aria-hidden="true">↗</span></span></a>`;
   document.title = "Электробаза — учебные материалы";
 }
 
