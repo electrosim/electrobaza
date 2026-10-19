@@ -136,6 +136,33 @@ img[src^="http"] + figcaption { margin: 10px auto 0; max-width: 560px; color: va
   .site-footer { padding: 16px; }
 }
 
+.material-reader .table-scroll {
+  margin: 22px 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.material-reader .table-scroll table {
+  min-width: 900px;
+  margin: 0;
+}
+
+.material-reader .tech-map {
+  font-size: .78em;
+  line-height: 1.45;
+}
+
+.material-reader .tech-map th,
+.material-reader .tech-map td {
+  padding: 7px 8px;
+}
+
+.material-reader .table-hint {
+  margin: 0 0 6px;
+  color: var(--muted);
+  font-size: .78em;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
 }

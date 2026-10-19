@@ -17,7 +17,13 @@
       "id":"mdk-05-02",
       "name":"МДК 05.02 Организация и выполнение работ по сборке и монтажу электрооборудования и распределительных устройств",
       "contentPath":"groups/1me-25/mdk-05-02",
-      "topics":[]
+      "topics":[
+        {
+          "id":"switch-socket-connection",
+          "name":"Подключение выключателей и розеток",
+          "materials":["switch-socket-connection-practice"]
+        }
+      ]
     },
     {
       "id":"mdk-04-02-1eo-25-s1",
@@ -104,6 +110,13 @@
       "name":"Лекция",
       "description":"Общая характеристика пакетов прикладных программ для математических расчётов",
       "file":"content/groups/1eo-24/op-08/math-software-packages/Лекция.html"
+    },
+    {
+      "id":"switch-socket-connection-practice",
+      "type":"practice",
+      "name":"Практическая работа",
+      "description":"Подключение выключателей и розеток: схемы и технологические карты",
+      "file":"content/groups/1me-25/mdk-05-02/switch-socket-connection/Практическая работа.html"
     }
   ]
 }
