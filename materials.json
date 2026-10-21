@@ -85,7 +85,13 @@
       "id":"op-03",
       "name":"ОП.03 Электротехника и электроника",
       "contentPath":"groups/1a-25-3a-26-11/op-03",
-      "topics":[]
+      "topics":[
+        {
+          "id":"electromagnetism",
+          "name":"Электромагнетизм и электромагнитная индукция",
+          "materials":["electromagnetism-lecture"]
+        }
+      ]
     }
   ],
   "materials": [
@@ -130,6 +136,13 @@
       "name":"Лекция",
       "description":"Электрические источники света. Осветительная арматура",
       "file":"content/groups/1eo-25/mdk-04-02/semester-1/light-sources-luminaires/Лекция.html"
+    },
+    {
+      "id":"electromagnetism-lecture",
+      "type":"lecture",
+      "name":"Лекция",
+      "description":"Электромагнетизм и электромагнитная индукция",
+      "file":"content/groups/1a-25-3a-26-11/op-03/electromagnetism/Лекция.html"
     }
   ]
 }
