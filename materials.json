@@ -22,6 +22,11 @@
           "id":"switch-socket-connection",
           "name":"Подключение выключателей и розеток",
           "materials":["switch-socket-connection-practice"]
+        },
+        {
+          "id":"lighting-network-check",
+          "name":"Проверка осветительной сети",
+          "materials":["lighting-network-check-practice"]
         }
       ]
     },
@@ -143,6 +148,13 @@
       "name":"Лекция",
       "description":"Электромагнетизм и электромагнитная индукция",
       "file":"content/groups/1a-25-3a-26-11/op-03/electromagnetism/Лекция.html"
+    },
+    {
+      "id":"lighting-network-check-practice",
+      "type":"practice",
+      "name":"Практическая работа",
+      "description":"Проверка осветительной сети: расчёт потери напряжения, выбор кабеля и аппарата защиты",
+      "file":"content/groups/1me-25/mdk-05-02/lighting-network-check/Практическая работа.html"
     }
   ]
 }
