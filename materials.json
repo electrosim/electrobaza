@@ -40,6 +40,11 @@
           "id":"light-sources-luminaires",
           "name":"Электрические источники света. Осветительная арматура",
           "materials":["light-sources-luminaires-lecture"]
+        },
+        {
+          "id":"lighting-installation-repair",
+          "name":"Технология монтажа и ремонта светильников общего применения",
+          "materials":["lighting-installation-repair-lecture"]
         }
       ]
     },
@@ -167,6 +172,13 @@
       "name":"Практическая работа",
       "description":"Монтаж, наладка и ремонт схемы подключения трёхфазного электронного счётчика",
       "file":"content/groups/1eo-24/mdk-04-02/semester-3/three-phase-meter-connection/Практическая работа.html"
+    },
+    {
+      "id":"lighting-installation-repair-lecture",
+      "type":"lecture",
+      "name":"Лекция",
+      "description":"Технология монтажа и ремонта светильников общего применения",
+      "file":"content/groups/1eo-25/mdk-04-02/semester-1/lighting-installation-repair/Лекция.html"
     }
   ]
 }

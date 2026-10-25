@@ -108,6 +108,7 @@ h3 { margin-bottom: 5px; font-size: 19px; line-height: 1.35; }
 .material-reader tbody tr:nth-child(even) { background: #f8fbf8; }
 .material-reader figure { margin: 26px 0; }
 .material-reader img { display: block; width: 100%; max-width: 560px; height: auto; margin: 0 auto; }
+.material-reader figure.small-figure img { max-width: 420px; }
 img[src^="http"] { display: block; max-width: min(100%, 560px); height: auto; margin: 24px auto 0; }
 img[src^="http"] + figcaption { margin: 10px auto 0; max-width: 560px; color: var(--muted); font-size: 13px; line-height: 1.5; text-align: center; }
 .material-reader figure + figure { margin-top: 18px; }
