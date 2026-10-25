@@ -53,6 +53,11 @@
           "id":"undervoltage-release-light-sensor",
           "name":"Монтаж, наладка и ремонт схемы, содержащей расцепитель минимального напряжения и датчик освещённости",
           "materials":["undervoltage-release-light-sensor-lecture","undervoltage-release-light-sensor-practice"]
+        },
+        {
+          "id":"three-phase-meter-connection",
+          "name":"Монтаж, наладка и ремонт схемы подключения трёхфазного электронного счётчика",
+          "materials":["three-phase-meter-connection-practice"]
         }
       ]
     },
@@ -155,6 +160,13 @@
       "name":"Практическая работа",
       "description":"Проверка осветительной сети: расчёт потери напряжения, выбор кабеля и аппарата защиты",
       "file":"content/groups/1me-25/mdk-05-02/lighting-network-check/Практическая работа.html"
+    },
+    {
+      "id":"three-phase-meter-connection-practice",
+      "type":"practice",
+      "name":"Практическая работа",
+      "description":"Монтаж, наладка и ремонт схемы подключения трёхфазного электронного счётчика",
+      "file":"content/groups/1eo-24/mdk-04-02/semester-3/three-phase-meter-connection/Практическая работа.html"
     }
   ]
 }
