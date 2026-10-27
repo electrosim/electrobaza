@@ -1,184 +1,249 @@
 {
   "currentTopic": null,
   "groups": [
-    {"id":"1me-25","name":"1МЭ-25","mark":"МЭ","disciplines":["mdk-05-01","mdk-05-02"]},
-    {"id":"1eo-25","name":"1ЭО-25","mark":"ЭО","disciplines":["mdk-04-01","mdk-04-02-1eo-25-s1"]},
-    {"id":"1eo-24","name":"1ЭО-24","mark":"ЭО","disciplines":["mdk-04-02-1eo-24-s3","op-08","op-12"]},
-    {"id":"1a-25-3a-26-11","name":"1А-25 и 3А-26/11","mark":"А","disciplines":["op-03"]}
+    {
+      "id": "1me-25",
+      "name": "1МЭ-25",
+      "mark": "МЭ",
+      "disciplines": [
+        "mdk-05-01",
+        "mdk-05-02"
+      ]
+    },
+    {
+      "id": "1eo-25",
+      "name": "1ЭО-25",
+      "mark": "ЭО",
+      "disciplines": [
+        "mdk-04-01",
+        "mdk-04-02-1eo-25-s1"
+      ]
+    },
+    {
+      "id": "1eo-24",
+      "name": "1ЭО-24",
+      "mark": "ЭО",
+      "disciplines": [
+        "mdk-04-02-1eo-24-s3",
+        "op-08",
+        "op-12"
+      ]
+    },
+    {
+      "id": "1a-25-3a-26-11",
+      "name": "1А-25 и 3А-26/11",
+      "mark": "А",
+      "disciplines": [
+        "op-03"
+      ]
+    }
   ],
   "disciplines": [
     {
-      "id":"mdk-05-01",
-      "name":"МДК 05.01 Основы слесарно-сборочных и электромонтажных работ",
-      "contentPath":"groups/1me-25/mdk-05-01",
-      "topics":[]
+      "id": "mdk-05-01",
+      "name": "МДК 05.01 Основы слесарно-сборочных и электромонтажных работ",
+      "contentPath": "groups/1me-25/mdk-05-01",
+      "topics": []
     },
     {
-      "id":"mdk-05-02",
-      "name":"МДК 05.02 Организация и выполнение работ по сборке и монтажу электрооборудования и распределительных устройств",
-      "contentPath":"groups/1me-25/mdk-05-02",
-      "topics":[
+      "id": "mdk-05-02",
+      "name": "МДК 05.02 Организация и выполнение работ по сборке и монтажу электрооборудования и распределительных устройств",
+      "contentPath": "groups/1me-25/mdk-05-02",
+      "topics": [
         {
-          "id":"switch-socket-connection",
-          "name":"Подключение выключателей и розеток",
-          "materials":["switch-socket-connection-practice"]
+          "id": "switch-socket-connection",
+          "name": "Подключение выключателей и розеток",
+          "materials": [
+            "switch-socket-connection-practice"
+          ]
         },
         {
-          "id":"lighting-network-check",
-          "name":"Проверка осветительной сети",
-          "materials":["lighting-network-check-practice"]
+          "id": "lighting-network-check",
+          "name": "Проверка осветительной сети",
+          "materials": [
+            "lighting-network-check-practice"
+          ]
         }
       ]
     },
     {
-      "id":"mdk-04-02-1eo-25-s1",
-      "name":"МДК 04.02 Организация работ по сборке, монтажу и ремонту электрооборудования",
-      "semester":1,
-      "contentPath":"groups/1eo-25/mdk-04-02/semester-1",
-      "topics":[
+      "id": "mdk-04-02-1eo-25-s1",
+      "name": "МДК 04.02 Организация работ по сборке, монтажу и ремонту электрооборудования",
+      "semester": 1,
+      "contentPath": "groups/1eo-25/mdk-04-02/semester-1",
+      "topics": [
         {
-          "id":"light-sources-luminaires",
-          "name":"Электрические источники света. Осветительная арматура",
-          "materials":["light-sources-luminaires-lecture"]
+          "id": "light-sources-luminaires",
+          "name": "Электрические источники света. Осветительная арматура",
+          "materials": [
+            "light-sources-luminaires-lecture"
+          ]
         },
         {
-          "id":"lighting-installation-repair",
-          "name":"Технология монтажа и ремонта светильников общего применения",
-          "materials":["lighting-installation-repair-lecture"]
+          "id": "lighting-installation-repair",
+          "name": "Технология монтажа и ремонта светильников общего применения",
+          "materials": [
+            "lighting-installation-repair-lecture"
+          ]
         }
       ]
     },
     {
-      "id":"mdk-04-02-1eo-24-s3",
-      "name":"МДК 04.02 Организация работ по сборке, монтажу и ремонту электрооборудования",
-      "semester":3,
-      "contentPath":"groups/1eo-24/mdk-04-02/semester-3",
-      "topics":[
+      "id": "mdk-04-02-1eo-24-s3",
+      "name": "МДК 04.02 Организация работ по сборке, монтажу и ремонту электрооборудования",
+      "semester": 3,
+      "contentPath": "groups/1eo-24/mdk-04-02/semester-3",
+      "topics": [
         {
-          "id":"undervoltage-release-light-sensor",
-          "name":"Монтаж, наладка и ремонт схемы, содержащей расцепитель минимального напряжения и датчик освещённости",
-          "materials":["undervoltage-release-light-sensor-lecture","undervoltage-release-light-sensor-practice"]
+          "id": "undervoltage-release-light-sensor",
+          "name": "Монтаж, наладка и ремонт схемы, содержащей расцепитель минимального напряжения и датчик освещённости",
+          "materials": [
+            "undervoltage-release-light-sensor-lecture",
+            "undervoltage-release-light-sensor-practice"
+          ]
         },
         {
-          "id":"three-phase-meter-connection",
-          "name":"Монтаж, наладка и ремонт схемы подключения трёхфазного электронного счётчика",
-          "materials":["three-phase-meter-connection-practice"]
+          "id": "three-phase-meter-connection",
+          "name": "Монтаж, наладка и ремонт схемы подключения трёхфазного электронного счётчика",
+          "materials": [
+            "three-phase-meter-connection-practice"
+          ]
+        },
+        {
+          "id": "electrical-apparatus-faults",
+          "name": "Неисправности электрических аппаратов и способы их устранения. Испытания и наладка электрических аппаратов",
+          "materials": [
+            "electrical-apparatus-faults-lecture"
+          ]
         }
       ]
     },
     {
-      "id":"mdk-04-01",
-      "name":"МДК 04.01 Основы слесарно-сборочных и электромонтажных работ",
-      "contentPath":"groups/1eo-25/mdk-04-01",
-      "topics":[]
+      "id": "mdk-04-01",
+      "name": "МДК 04.01 Основы слесарно-сборочных и электромонтажных работ",
+      "contentPath": "groups/1eo-25/mdk-04-01",
+      "topics": []
     },
     {
-      "id":"op-08",
-      "name":"ОП.08 Информационные технологии в профессиональной деятельности",
-      "contentPath":"groups/1eo-24/op-08",
-      "topics":[
+      "id": "op-08",
+      "name": "ОП.08 Информационные технологии в профессиональной деятельности",
+      "contentPath": "groups/1eo-24/op-08",
+      "topics": [
         {
-          "id":"math-software-packages",
-          "name":"Общая характеристика пакетов прикладных программ для математических расчётов",
-          "materials":["math-software-packages-lecture"]
+          "id": "math-software-packages",
+          "name": "Общая характеристика пакетов прикладных программ для математических расчётов",
+          "materials": [
+            "math-software-packages-lecture"
+          ]
         }
       ]
     },
     {
-      "id":"op-12",
-      "name":"ОП.12 Правовые основы профессиональной деятельности",
-      "contentPath":"groups/1eo-24/op-12",
-      "topics":[
+      "id": "op-12",
+      "name": "ОП.12 Правовые основы профессиональной деятельности",
+      "contentPath": "groups/1eo-24/op-12",
+      "topics": [
         {
-          "id":"constitutional-system",
-          "name":"Конституционный строй: форма правления, форма государственного устройства и политический режим",
-          "materials":["constitutional-system-lecture"]
+          "id": "constitutional-system",
+          "name": "Конституционный строй: форма правления, форма государственного устройства и политический режим",
+          "materials": [
+            "constitutional-system-lecture"
+          ]
         }
       ]
     },
     {
-      "id":"op-03",
-      "name":"ОП.03 Электротехника и электроника",
-      "contentPath":"groups/1a-25-3a-26-11/op-03",
-      "topics":[
+      "id": "op-03",
+      "name": "ОП.03 Электротехника и электроника",
+      "contentPath": "groups/1a-25-3a-26-11/op-03",
+      "topics": [
         {
-          "id":"electromagnetism",
-          "name":"Электромагнетизм и электромагнитная индукция",
-          "materials":["electromagnetism-lecture"]
+          "id": "electromagnetism",
+          "name": "Электромагнетизм и электромагнитная индукция",
+          "materials": [
+            "electromagnetism-lecture"
+          ]
         }
       ]
     }
   ],
   "materials": [
     {
-      "id":"undervoltage-release-light-sensor-lecture",
-      "type":"lecture",
-      "name":"Лекция",
-      "description":"Расцепитель минимального напряжения: устройство, уставки, применение и расчёт",
-      "file":"content/groups/1eo-24/mdk-04-02/semester-3/undervoltage-release-light-sensor/Лекция (расцепитель).html"
+      "id": "undervoltage-release-light-sensor-lecture",
+      "type": "lecture",
+      "name": "Лекция",
+      "description": "Расцепитель минимального напряжения: устройство, уставки, применение и расчёт",
+      "file": "content/groups/1eo-24/mdk-04-02/semester-3/undervoltage-release-light-sensor/Лекция (расцепитель).html"
     },
     {
-      "id":"undervoltage-release-light-sensor-practice",
-      "type":"practice",
-      "name":"Практическая работа",
-      "description":"Расчёт параметров схемы с расцепителем минимального напряжения и датчиком освещённости",
-      "file":"content/groups/1eo-24/mdk-04-02/semester-3/undervoltage-release-light-sensor/Практическая работа.html"
+      "id": "undervoltage-release-light-sensor-practice",
+      "type": "practice",
+      "name": "Практическая работа",
+      "description": "Расчёт параметров схемы с расцепителем минимального напряжения и датчиком освещённости",
+      "file": "content/groups/1eo-24/mdk-04-02/semester-3/undervoltage-release-light-sensor/Практическая работа.html"
     },
     {
-      "id":"constitutional-system-lecture",
-      "type":"lecture",
-      "name":"Лекция",
-      "description":"Конституционный строй: форма правления, форма государственного устройства и политический режим",
-      "file":"content/groups/1eo-24/op-12/constitutional-system/Лекция.html"
+      "id": "constitutional-system-lecture",
+      "type": "lecture",
+      "name": "Лекция",
+      "description": "Конституционный строй: форма правления, форма государственного устройства и политический режим",
+      "file": "content/groups/1eo-24/op-12/constitutional-system/Лекция.html"
     },
     {
-      "id":"math-software-packages-lecture",
-      "type":"lecture",
-      "name":"Лекция",
-      "description":"Общая характеристика пакетов прикладных программ для математических расчётов",
-      "file":"content/groups/1eo-24/op-08/math-software-packages/Лекция.html"
+      "id": "math-software-packages-lecture",
+      "type": "lecture",
+      "name": "Лекция",
+      "description": "Общая характеристика пакетов прикладных программ для математических расчётов",
+      "file": "content/groups/1eo-24/op-08/math-software-packages/Лекция.html"
     },
     {
-      "id":"switch-socket-connection-practice",
-      "type":"practice",
-      "name":"Практическая работа",
-      "description":"Подключение выключателей и розеток: схемы и технологические карты",
-      "file":"content/groups/1me-25/mdk-05-02/switch-socket-connection/Практическая работа.html"
+      "id": "switch-socket-connection-practice",
+      "type": "practice",
+      "name": "Практическая работа",
+      "description": "Подключение выключателей и розеток: схемы и технологические карты",
+      "file": "content/groups/1me-25/mdk-05-02/switch-socket-connection/Практическая работа.html"
     },
     {
-      "id":"light-sources-luminaires-lecture",
-      "type":"lecture",
-      "name":"Лекция",
-      "description":"Электрические источники света. Осветительная арматура",
-      "file":"content/groups/1eo-25/mdk-04-02/semester-1/light-sources-luminaires/Лекция.html"
+      "id": "light-sources-luminaires-lecture",
+      "type": "lecture",
+      "name": "Лекция",
+      "description": "Электрические источники света. Осветительная арматура",
+      "file": "content/groups/1eo-25/mdk-04-02/semester-1/light-sources-luminaires/Лекция.html"
     },
     {
-      "id":"electromagnetism-lecture",
-      "type":"lecture",
-      "name":"Лекция",
-      "description":"Электромагнетизм и электромагнитная индукция",
-      "file":"content/groups/1a-25-3a-26-11/op-03/electromagnetism/Лекция.html"
+      "id": "electromagnetism-lecture",
+      "type": "lecture",
+      "name": "Лекция",
+      "description": "Электромагнетизм и электромагнитная индукция",
+      "file": "content/groups/1a-25-3a-26-11/op-03/electromagnetism/Лекция.html"
     },
     {
-      "id":"lighting-network-check-practice",
-      "type":"practice",
-      "name":"Практическая работа",
-      "description":"Проверка осветительной сети: расчёт потери напряжения, выбор кабеля и аппарата защиты",
-      "file":"content/groups/1me-25/mdk-05-02/lighting-network-check/Практическая работа.html"
+      "id": "lighting-network-check-practice",
+      "type": "practice",
+      "name": "Практическая работа",
+      "description": "Проверка осветительной сети: расчёт потери напряжения, выбор кабеля и аппарата защиты",
+      "file": "content/groups/1me-25/mdk-05-02/lighting-network-check/Практическая работа.html"
     },
     {
-      "id":"three-phase-meter-connection-practice",
-      "type":"practice",
-      "name":"Практическая работа",
-      "description":"Монтаж, наладка и ремонт схемы подключения трёхфазного электронного счётчика",
-      "file":"content/groups/1eo-24/mdk-04-02/semester-3/three-phase-meter-connection/Практическая работа.html"
+      "id": "three-phase-meter-connection-practice",
+      "type": "practice",
+      "name": "Практическая работа",
+      "description": "Монтаж, наладка и ремонт схемы подключения трёхфазного электронного счётчика",
+      "file": "content/groups/1eo-24/mdk-04-02/semester-3/three-phase-meter-connection/Практическая работа.html"
     },
     {
-      "id":"lighting-installation-repair-lecture",
-      "type":"lecture",
-      "name":"Лекция",
-      "description":"Технология монтажа и ремонта светильников общего применения",
-      "file":"content/groups/1eo-25/mdk-04-02/semester-1/lighting-installation-repair/Лекция.html"
+      "id": "lighting-installation-repair-lecture",
+      "type": "lecture",
+      "name": "Лекция",
+      "description": "Технология монтажа и ремонта светильников общего применения",
+      "file": "content/groups/1eo-25/mdk-04-02/semester-1/lighting-installation-repair/Лекция.html"
+    },
+    {
+      "id": "electrical-apparatus-faults-lecture",
+      "type": "lecture",
+      "name": "Лекция",
+      "description": "Неисправности, диагностика, испытания и наладка электрических аппаратов",
+      "file": "content/groups/1eo-24/mdk-04-02/semester-3/electrical-apparatus-faults/Лекция.html"
     }
   ]
 }
