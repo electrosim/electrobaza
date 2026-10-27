@@ -103,6 +103,12 @@ h3 { margin-bottom: 5px; font-size: 19px; line-height: 1.35; }
 .material-reader .variants-table th:nth-child(3) { width: 13%; }
 .material-reader .variants-table th:nth-child(4) { width: 13%; }
 .material-reader .variants-table th:nth-child(5) { width: 30%; }
+.material-reader .solder-table th:nth-child(1) { width: 20%; }
+.material-reader .solder-table th:nth-child(2) { width: 22%; }
+.material-reader .solder-table th:nth-child(3) { width: 19%; }
+.material-reader .solder-table th:nth-child(4) { width: 39%; }
+.material-reader .solder-table th,
+.material-reader .solder-table td { overflow-wrap: normal; word-break: normal; }
 .material-reader .variants-table td { white-space: nowrap; }
 .material-reader .practice-table th,
 .material-reader .practice-table td { padding: 5px 5px; overflow-wrap: anywhere; }
@@ -123,6 +129,7 @@ img[src^="http"] + figcaption { margin: 10px auto 0; max-width: 560px; color: va
 .material-reader figcaption { margin-top: 10px; color: var(--muted); font-size: .8em; line-height: 1.5; text-align: center; }
 .material-reader .formula { margin: 10px 0; padding: 8px 12px; border-left: 3px solid var(--accent); border-radius: 0 8px 8px 0; background: var(--accent-soft); color: var(--accent-dark); font-size: 1.02em; font-weight: 600; line-height: 1.55; }
 .material-reader .table-caption { margin: 16px 0 6px; color: var(--muted); font-size: .82em; font-style: italic; }
+.material-reader .source { margin-top: 16px; color: var(--muted); font-size: .8em; font-style: italic; }
 .material-reader figure.wide-figure { max-width: 760px; margin: 22px auto; overflow-x: auto; }
 .material-reader figure.wide-figure img { width: 100%; max-width: 760px; }
 .material-reader .formulas { list-style: none; margin: 16px 0; padding: 12px 16px; border-radius: 12px; background: var(--accent-soft); color: var(--accent-dark); font-weight: 650; font-size: 1.02em; line-height: 1.6; }
@@ -170,6 +177,7 @@ img[src^="http"] + figcaption { margin: 10px auto 0; max-width: 560px; color: va
   .material-reader figure.wide-figure img { width: 720px; max-width: none; }
   .material-reader table { font-size: .78em; }
   .material-reader .practice-table { min-width: 620px; }
+  .material-reader .solder-table { font-size: .72em; }
   .material-reader .table-pair { grid-template-columns: 1fr; }
   .material-reader .table-pair .practice-table { min-width: 0; }
   .material-reader .table-hint-mobile { display: block; }

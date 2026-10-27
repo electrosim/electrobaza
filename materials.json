@@ -122,7 +122,13 @@
       "id": "mdk-04-01",
       "name": "МДК 04.01 Основы слесарно-сборочных и электромонтажных работ",
       "contentPath": "groups/1eo-25/mdk-04-01",
-      "topics": []
+      "topics": [
+        {
+          "id": "soldering-tinning",
+          "name": "Пайка. Лужение",
+          "materials": ["soldering-tinning-lecture"]
+        }
+      ]
     },
     {
       "id": "op-08",
@@ -244,6 +250,13 @@
       "name": "Лекция",
       "description": "Неисправности, диагностика, испытания и наладка электрических аппаратов",
       "file": "content/groups/1eo-24/mdk-04-02/semester-3/electrical-apparatus-faults/Лекция.html"
+    },
+    {
+      "id": "soldering-tinning-lecture",
+      "type": "lecture",
+      "name": "Лекция",
+      "description": "Пайка. Лужение",
+      "file": "content/groups/1eo-25/mdk-04-01/soldering-tinning/Лекция.html"
     }
   ]
 }
