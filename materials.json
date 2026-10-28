@@ -169,6 +169,13 @@
           "materials": [
             "electromagnetism-lecture"
           ]
+        },
+        {
+          "id": "electromagnetic-induction",
+          "name": "Закон электромагнитной индукции. Самоиндукция",
+          "materials": [
+            "electromagnetic-induction-lecture"
+          ]
         }
       ]
     }
@@ -257,6 +264,13 @@
       "name": "Лекция",
       "description": "Пайка. Лужение",
       "file": "content/groups/1eo-25/mdk-04-01/soldering-tinning/Лекция.html"
+    },
+    {
+      "id": "electromagnetic-induction-lecture",
+      "type": "lecture",
+      "name": "Лекция",
+      "description": "Закон электромагнитной индукции. Самоиндукция",
+      "file": "content/groups/1a-25-3a-26-11/op-03/electromagnetic-induction/Лекция.html"
     }
   ]
 }
