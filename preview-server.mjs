@@ -18,6 +18,7 @@ const mime = {
 };
 const clients = new Set();
 let reloadTimer;
+let rebuildPending = false;
 
 execFileSync(process.execPath, [join(root, "build-catalogue.mjs")], { stdio: "inherit" });
 
@@ -74,13 +75,16 @@ const server = createServer(async (request, response) => {
 watch(root, { recursive: true }, (_event, filename) => {
   const relative = String(filename || "").replaceAll("\\", "/");
   if (relative.startsWith(".git/") || relative === "preview-server.mjs") return;
+  if (relative === "materials.json" || relative.startsWith("content/")) rebuildPending = true;
   clearTimeout(reloadTimer);
   reloadTimer = setTimeout(() => {
-    if (relative === "materials.json" || relative.startsWith("content/")) {
+    if (rebuildPending) {
       try {
         execFileSync(process.execPath, [join(root, "build-catalogue.mjs")], { stdio: "inherit" });
+        rebuildPending = false;
       } catch (error) {
         console.error("Не удалось пересобрать каталог:", error.message);
+        return;
       }
     }
     notifyReload();

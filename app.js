@@ -24,7 +24,13 @@ let readingSize = Math.min(26, Math.max(15, Number(storage.getItem("electrobaza-
 
 const escapeHTML = (value) => String(value).replace(/[&<>"']/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[char]);
 const findById = (items, id) => items.find((item) => item.id === id);
-const route = () => decodeURIComponent(location.hash.replace(/^#\/?/, "")).split("/").filter(Boolean);
+const route = () => {
+  try {
+    return decodeURIComponent(location.hash.replace(/^#\/?/, "")).split("/").filter(Boolean);
+  } catch {
+    return ["not-found"];
+  }
+};
 const href = (parts) => `#/${parts.map(encodeURIComponent).join("/")}`;
 
 function parentPath(parts) {
@@ -166,6 +172,11 @@ function start() {
     return;
   }
   window.addEventListener("hashchange", render);
+  document.querySelector(".skip-link").addEventListener("click", (event) => {
+    event.preventDefault();
+    main.focus({ preventScroll: true });
+    main.scrollIntoView({ block: "start" });
+  });
   render();
 }
 
