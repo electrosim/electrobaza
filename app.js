@@ -37,9 +37,12 @@ function parentPath(parts) {
 }
 
 function addBackArrow(parts) {
+  const footer = document.querySelector(".site-footer");
+  if (!footer) return;
+  footer.querySelectorAll(".back-arrow").forEach((element) => element.remove());
   const parent = parentPath(parts);
   if (!parent) return;
-  main.insertAdjacentHTML("beforeend", `<a class="back-arrow" href="${href(parent)}" aria-label="Назад на одну страницу"><span class="arrow" aria-hidden="true">←</span></a>`);
+  footer.insertAdjacentHTML("afterbegin", `<a class="back-arrow" href="${href(parent)}" aria-label="Назад на одну страницу"><span class="arrow" aria-hidden="true">←</span></a>`);
 }
 
 function breadcrumb(items) {
