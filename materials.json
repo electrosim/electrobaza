@@ -43,7 +43,13 @@
       "id": "mdk-05-01",
       "name": "МДК 05.01 Основы слесарно-сборочных и электромонтажных работ",
       "contentPath": "groups/1me-25/mdk-05-01",
-      "topics": []
+      "topics": [
+        {
+          "id": "benchwork-attestation",
+          "name": "Слесарное дело. Аттестационная работа",
+          "materials": ["benchwork-attestation-practice"]
+        }
+      ]
     },
     {
       "id": "mdk-05-02",
@@ -127,6 +133,11 @@
           "id": "soldering-tinning",
           "name": "Пайка. Лужение",
           "materials": ["soldering-tinning-lecture"]
+        },
+        {
+          "id": "benchwork-attestation",
+          "name": "Слесарное дело. Аттестационная работа",
+          "materials": ["benchwork-attestation-practice"]
         }
       ]
     },
@@ -155,6 +166,21 @@
           "materials": [
             "constitutional-system-lecture"
           ]
+        },
+        {
+          "id": "law-sources",
+          "name": "Понятие права. Источники права",
+          "materials": ["law-sources-lecture"]
+        },
+        {
+          "id": "law-personality",
+          "name": "Право и поведение личности",
+          "materials": ["law-personality-lecture"]
+        },
+        {
+          "id": "npa-validity",
+          "name": "Правила действия нормативных правовых актов",
+          "materials": ["npa-validity-lecture"]
         }
       ]
     },
@@ -271,6 +297,34 @@
       "name": "Лекция",
       "description": "Закон электромагнитной индукции. Самоиндукция",
       "file": "content/groups/1a-25-3a-26-11/op-03/electromagnetic-induction/Лекция.html"
+    },
+    {
+      "id": "benchwork-attestation-practice",
+      "type": "attestation",
+      "name": "Аттестационная работа",
+      "description": "Слесарное дело. Аттестационная работа",
+      "file": "content/groups/1me-25/mdk-05-01/benchwork-attestation/Аттестационная работа.html"
+    },
+    {
+      "id": "law-sources-lecture",
+      "type": "lecture",
+      "name": "Лекция",
+      "description": "Понятие права. Источники права",
+      "file": "content/groups/1eo-24/op-12/law-sources/Лекция.html"
+    },
+    {
+      "id": "law-personality-lecture",
+      "type": "lecture",
+      "name": "Лекция",
+      "description": "Право и поведение личности",
+      "file": "content/groups/1eo-24/op-12/law-personality/Лекция.html"
+    },
+    {
+      "id": "npa-validity-lecture",
+      "type": "lecture",
+      "name": "Лекция",
+      "description": "Правила действия нормативных правовых актов",
+      "file": "content/groups/1eo-24/op-12/npa-validity/Лекция.html"
     }
   ]
 }

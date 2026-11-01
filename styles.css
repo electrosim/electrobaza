@@ -123,6 +123,10 @@ h3 { margin-bottom: 5px; font-size: 19px; line-height: 1.35; }
 .material-reader figure { margin: 26px 0; }
 .material-reader img { display: block; width: 100%; max-width: 560px; height: auto; margin: 0 auto; }
 .material-reader figure.small-figure img { max-width: 420px; }
+.material-reader .attestation-list li { margin: 0 0 14px; }
+.material-reader .attestation-list figure { margin: 12px 0 0; }
+.material-reader .tool-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin: 12px 0 0; }
+.material-reader .tool-grid img { width: 100%; max-width: 100%; height: 130px; object-fit: contain; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
 img[src^="http"] { display: block; max-width: min(100%, 560px); height: auto; margin: 24px auto 0; }
 img[src^="http"] + figcaption { margin: 10px auto 0; max-width: 560px; color: var(--muted); font-size: 13px; line-height: 1.5; text-align: center; }
 .material-reader figure + figure { margin-top: 18px; }
@@ -180,6 +184,7 @@ img[src^="http"] + figcaption { margin: 10px auto 0; max-width: 560px; color: va
   .material-reader .solder-table { font-size: .72em; }
   .material-reader .table-pair { grid-template-columns: 1fr; }
   .material-reader .table-pair .practice-table { min-width: 0; }
+  .material-reader .tool-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .material-reader .table-hint-mobile { display: block; }
   .material-reader th, .material-reader td { padding: 6px 7px; }
   .material-reader figcaption { font-size: .78em; }

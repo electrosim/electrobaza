@@ -1,6 +1,6 @@
 const main = document.querySelector("#main");
-const typeNames = { lecture: "Лекция", practice: "Практическая работа", lab: "Лабораторная работа", slides: "Презентация", file: "Файл" };
-const typeMarks = { lecture: "Л", practice: "П", lab: "ЛР", slides: "С", file: "↓" };
+const typeNames = { lecture: "Лекция", practice: "Практическая работа", lab: "Лабораторная работа", slides: "Презентация", attestation: "Аттестационная работа", file: "Файл" };
+const typeMarks = { lecture: "Л", practice: "П", lab: "ЛР", slides: "С", attestation: "А", file: "↓" };
 let catalogue;
 let materialContent;
 let slideIndex = 0;
