@@ -39,7 +39,7 @@ function parentPath(parts) {
 function addBackArrow(parts) {
   const parent = parentPath(parts);
   if (!parent) return;
-  main.insertAdjacentHTML("beforeend", `<a class="back-arrow" href="${href(parent)}" aria-label="Назад на одну страницу">←</a>`);
+  main.insertAdjacentHTML("beforeend", `<a class="back-arrow" href="${href(parent)}" aria-label="Назад на одну страницу"><span class="arrow" aria-hidden="true">←</span></a>`);
 }
 
 function breadcrumb(items) {
