@@ -27,6 +27,21 @@ const findById = (items, id) => items.find((item) => item.id === id);
 const route = () => decodeURIComponent(location.hash.replace(/^#\/?/, "")).split("/").filter(Boolean);
 const href = (parts) => `#/${parts.map(encodeURIComponent).join("/")}`;
 
+function parentPath(parts) {
+  if (!parts.length) return null;
+  if (parts[0] === "group" && parts.length === 2) return [];
+  if (parts[0] === "group" && parts.length === 4 && parts[2] === "subject") return ["group", parts[1]];
+  if (parts[0] === "group" && parts.length === 6 && parts[2] === "subject" && parts[4] === "topic") return ["group", parts[1], "subject", parts[3]];
+  if (parts[0] === "material" && parts.length === 5) return ["group", parts[1], "subject", parts[2], "topic", parts[3]];
+  return [];
+}
+
+function addBackArrow(parts) {
+  const parent = parentPath(parts);
+  if (!parent) return;
+  main.insertAdjacentHTML("beforeend", `<a class="back-arrow" href="${href(parent)}" aria-label="Назад на одну страницу">←</a>`);
+}
+
 function breadcrumb(items) {
   return `<nav class="breadcrumb" aria-label="Навигация">${items.map((item, index) => `${index ? '<span class="crumb-separator" aria-hidden="true">/</span>' : ""}${index === items.length - 1 ? `<span class="current" aria-current="page">${escapeHTML(item.label)}</span>` : `<a href="${href(item.path)}">${escapeHTML(item.label)}</a>`}`).join("")}</nav>`;
 }
@@ -82,7 +97,7 @@ function materialPage(groupId, subjectId, topicId, materialId) {
   const topic = subject && findById(subject.topics, topicId);
   const material = topic && topic.materials.includes(materialId) && findById(catalogue.materials, materialId);
   if (!group || !subject || !group.disciplines.includes(subject.id) || !topic || !material) return notFound();
-  main.innerHTML = `${intro(typeNames[material.type] || "Материал", topic.name)}<div class="reader-layout"><div class="reader-tools"><div class="text-size-control" role="group" aria-label="Размер текста"><button type="button" class="text-size-step" id="text-size-decrease" aria-label="Уменьшить размер текста">−</button><span class="text-size-value" id="text-size-value" aria-live="polite">Размер текста: ${readingSize}px</span><button type="button" class="text-size-step" id="text-size-increase" aria-label="Увеличить размер текста">+</button></div></div><article class="material-reader" id="reader" aria-live="polite"><p class="loading">Открываем материал…</p></article><div class="pager" id="slide-controls" hidden><button type="button" class="button button-outline" id="slide-prev">← Назад</button><button type="button" class="button" id="slide-next">Далее →</button></div></div><p class="course-note"><a href="${href(["group", group.id, "subject", subject.id, "topic", topic.id])}">← Вернуться ко всем материалам темы</a></p>`;
+  main.innerHTML = `${intro(typeNames[material.type] || "Материал", topic.name)}<div class="reader-layout"><div class="reader-tools"><div class="text-size-control" role="group" aria-label="Размер текста"><button type="button" class="text-size-step" id="text-size-decrease" aria-label="Уменьшить размер текста">−</button><span class="text-size-value" id="text-size-value" aria-live="polite">Размер текста: ${readingSize}px</span><button type="button" class="text-size-step" id="text-size-increase" aria-label="Увеличить размер текста">+</button></div></div><article class="material-reader" id="reader" aria-live="polite"><p class="loading">Открываем материал…</p></article><div class="pager" id="slide-controls" hidden><button type="button" class="button button-outline" id="slide-prev">← Назад</button><button type="button" class="button" id="slide-next">Далее →</button></div></div>`;
   document.title = `${material.name}: ${topic.name} — Электробаза`;
   const updateReadingSize = (delta) => {
     readingSize = Math.min(26, Math.max(15, readingSize + delta));
@@ -130,12 +145,13 @@ function notFound() {
 
 function render() {
   const parts = route();
-  if (parts.length === 0) return groupPage();
-  if (parts[0] === "group" && parts.length === 2) return groupPageById(parts[1]);
-  if (parts[0] === "group" && parts[2] === "subject" && parts.length === 4) return subjectPage(parts[1], parts[3]);
-  if (parts[0] === "group" && parts[2] === "subject" && parts[4] === "topic" && parts.length === 6) return topicPage(parts[1], parts[3], parts[5]);
-  if (parts[0] === "material" && parts.length === 5) return materialPage(parts[1], parts[2], parts[3], parts[4]);
-  return notFound();
+  if (parts.length === 0) groupPage();
+  else if (parts[0] === "group" && parts.length === 2) groupPageById(parts[1]);
+  else if (parts[0] === "group" && parts[2] === "subject" && parts.length === 4) subjectPage(parts[1], parts[3]);
+  else if (parts[0] === "group" && parts[2] === "subject" && parts[4] === "topic" && parts.length === 6) topicPage(parts[1], parts[3], parts[5]);
+  else if (parts[0] === "material" && parts.length === 5) materialPage(parts[1], parts[2], parts[3], parts[4]);
+  else notFound();
+  addBackArrow(parts);
 }
 
 function start() {
