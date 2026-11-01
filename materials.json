@@ -181,6 +181,11 @@
           "id": "npa-validity",
           "name": "Правила действия нормативных правовых актов",
           "materials": ["npa-validity-lecture"]
+        },
+        {
+          "id": "law-attestation",
+          "name": "Аттестационная работа",
+          "materials": ["law-attestation"]
         }
       ]
     },
@@ -325,6 +330,13 @@
       "name": "Лекция",
       "description": "Правила действия нормативных правовых актов",
       "file": "content/groups/1eo-24/op-12/npa-validity/Лекция.html"
+    },
+    {
+      "id": "law-attestation",
+      "type": "attestation",
+      "name": "Аттестационная работа",
+      "description": "Правовые основы профессиональной деятельности",
+      "file": "content/groups/1eo-24/op-12/attestation/Аттестационная работа.html"
     }
   ]
 }
