@@ -121,6 +121,11 @@
           "materials": [
             "electrical-apparatus-faults-lecture"
           ]
+        },
+        {
+          "id": "attestation",
+          "name": "Аттестационная работа",
+          "materials": ["mdk-04-02-attestation"]
         }
       ]
     },
@@ -337,6 +342,13 @@
       "name": "Аттестационная работа",
       "description": "Правовые основы профессиональной деятельности",
       "file": "content/groups/1eo-24/op-12/attestation/Аттестационная работа.html"
+    },
+    {
+      "id": "mdk-04-02-attestation",
+      "type": "attestation",
+      "name": "Аттестационная работа",
+      "description": "МДК 04.02 Организация работ по сборке, монтажу и ремонту электрооборудования",
+      "file": "content/groups/1eo-24/mdk-04-02/semester-3/attestation/Аттестационная работа.html"
     }
   ]
 }

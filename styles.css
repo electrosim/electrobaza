@@ -130,6 +130,7 @@ h3 { margin-bottom: 5px; font-size: 19px; line-height: 1.35; }
 .material-reader .test-list p { margin: 0; }
 .material-reader .test-option,
 .material-reader .test-options { margin: 3px 0 0 15px !important; color: #000; }
+.material-reader .answer-line { height: 1.6em; margin: 0 0 8px; border-bottom: 1px solid var(--line); }
 .material-reader .tool-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin: 12px 0 0; }
 .material-reader .tool-grid img { width: 100%; max-width: 100%; height: 130px; object-fit: contain; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
 img[src^="http"] { display: block; max-width: min(100%, 560px); height: auto; margin: 24px auto 0; }
