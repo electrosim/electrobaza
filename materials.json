@@ -157,6 +157,21 @@
       "contentPath": "groups/1eo-24/op-08",
       "topics": [
         {
+          "id": "information-resources",
+          "name": "Информационные ресурсы и информационные технологии",
+          "materials": ["information-resources-lecture"]
+        },
+        {
+          "id": "information-systems",
+          "name": "Информационные системы. Классификация информационных систем",
+          "materials": ["information-systems-lecture"]
+        },
+        {
+          "id": "engineering-calculations-automation",
+          "name": "Автоматизация выполнения различных инженерных расчётов",
+          "materials": ["engineering-calculations-automation-lecture"]
+        },
+        {
           "id": "math-software-packages",
           "name": "Общая характеристика пакетов прикладных программ для математических расчётов",
           "materials": [
@@ -361,6 +376,27 @@
       "name": "Лекция",
       "description": "Виды соединений жил проводов и кабелей: скрутка, пайка, сварка, опрессовка, зажимы",
       "file": "content/groups/1me-25/mdk-05-01/wire-connections/Лекция.html"
+    },
+    {
+      "id": "information-resources-lecture",
+      "type": "lecture",
+      "name": "Лекция",
+      "description": "Информационные ресурсы и информационные технологии: данные, информация, знания",
+      "file": "content/groups/1eo-24/op-08/information-resources/Лекция.html"
+    },
+    {
+      "id": "information-systems-lecture",
+      "type": "lecture",
+      "name": "Лекция",
+      "description": "Информационные системы и их классификация",
+      "file": "content/groups/1eo-24/op-08/information-systems/Лекция.html"
+    },
+    {
+      "id": "engineering-calculations-automation-lecture",
+      "type": "lecture",
+      "name": "Лекция",
+      "description": "Автоматизация инженерных расчётов: инструменты, этапы, пример расчёта",
+      "file": "content/groups/1eo-24/op-08/engineering-calculations-automation/Лекция.html"
     }
   ]
 }
