@@ -45,6 +45,11 @@
       "contentPath": "groups/1me-25/mdk-05-01",
       "topics": [
         {
+          "id": "wire-connections",
+          "name": "Виды соединений жил проводов и кабелей",
+          "materials": ["wire-connections-lecture"]
+        },
+        {
           "id": "benchwork-attestation",
           "name": "Слесарное дело. Аттестационная работа",
           "materials": ["benchwork-attestation-practice"]
@@ -349,6 +354,13 @@
       "name": "Аттестационная работа",
       "description": "МДК 04.02 Организация работ по сборке, монтажу и ремонту электрооборудования",
       "file": "content/groups/1eo-24/mdk-04-02/semester-3/attestation/Аттестационная работа.html"
+    },
+    {
+      "id": "wire-connections-lecture",
+      "type": "lecture",
+      "name": "Лекция",
+      "description": "Виды соединений жил проводов и кабелей: скрутка, пайка, сварка, опрессовка, зажимы",
+      "file": "content/groups/1me-25/mdk-05-01/wire-connections/Лекция.html"
     }
   ]
 }
