@@ -45,14 +45,14 @@
       "contentPath": "groups/1me-25/mdk-05-01",
       "topics": [
         {
-          "id": "wire-connections",
-          "name": "Виды соединений жил проводов и кабелей",
-          "materials": ["wire-connections-lecture"]
-        },
-        {
           "id": "benchwork-attestation",
           "name": "Слесарное дело. Аттестационная работа",
           "materials": ["benchwork-attestation-practice"]
+        },
+        {
+          "id": "wire-connections",
+          "name": "Виды соединений жил проводов и кабелей",
+          "materials": ["wire-connections-lecture"]
         }
       ]
     },
