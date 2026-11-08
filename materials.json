@@ -213,14 +213,14 @@
           "materials": ["npa-validity-lecture"]
         },
         {
-          "id": "judicial-authority",
-          "name": "Органы судебной власти",
-          "materials": ["judicial-authority-lecture"]
-        },
-        {
           "id": "law-attestation",
           "name": "Аттестационная работа",
           "materials": ["law-attestation"]
+        },
+        {
+          "id": "judicial-authority",
+          "name": "Органы судебной власти",
+          "materials": ["judicial-authority-lecture"]
         }
       ]
     },
