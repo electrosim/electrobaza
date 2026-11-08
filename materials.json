@@ -213,6 +213,11 @@
           "materials": ["npa-validity-lecture"]
         },
         {
+          "id": "judicial-authority",
+          "name": "Органы судебной власти",
+          "materials": ["judicial-authority-lecture"]
+        },
+        {
           "id": "law-attestation",
           "name": "Аттестационная работа",
           "materials": ["law-attestation"]
@@ -360,6 +365,13 @@
       "name": "Лекция",
       "description": "Правила действия нормативных правовых актов",
       "file": "content/groups/1eo-24/op-12/npa-validity/Лекция.html"
+    },
+    {
+      "id": "judicial-authority-lecture",
+      "type": "lecture",
+      "name": "Лекция",
+      "description": "Судебная власть, судебная система, статус судей и право на судебную защиту",
+      "file": "content/groups/1eo-24/op-12/judicial-authority/Лекция.html"
     },
     {
       "id": "law-attestation",
