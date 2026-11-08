@@ -74,6 +74,11 @@
           "materials": [
             "lighting-network-check-practice"
           ]
+        },
+        {
+          "id": "circuit-breaker-selection",
+          "name": "Принцип действия и установка автоматического выключателя",
+          "materials": ["circuit-breaker-selection-practice"]
         }
       ]
     },
@@ -421,6 +426,13 @@
       "name": "Лекция",
       "description": "ПУЭ и государственные стандарты: статус, структура и применение в электромонтаже",
       "file": "content/groups/1eo-24/mdk-04-02/semester-3/pue-and-gost/Лекция.html"
+    },
+    {
+      "id": "circuit-breaker-selection-practice",
+      "type": "practice",
+      "name": "Практическая работа",
+      "description": "Выбор автоматического выключателя: расчётный ток, проверка отсечки, время-токовые характеристики B, C, D",
+      "file": "content/groups/1me-25/mdk-05-02/circuit-breaker-selection/Практическая работа.html"
     }
   ]
 }
