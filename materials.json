@@ -128,6 +128,11 @@
           ]
         },
         {
+          "id": "pue-and-gost",
+          "name": "Правила устройства электроустановок. Государственный стандарт",
+          "materials": ["pue-and-gost-lecture"]
+        },
+        {
           "id": "attestation",
           "name": "Аттестационная работа",
           "materials": ["mdk-04-02-attestation"]
@@ -397,6 +402,13 @@
       "name": "Лекция",
       "description": "Автоматизация инженерных расчётов: инструменты, этапы, пример расчёта",
       "file": "content/groups/1eo-24/op-08/engineering-calculations-automation/Лекция.html"
+    },
+    {
+      "id": "pue-and-gost-lecture",
+      "type": "lecture",
+      "name": "Лекция",
+      "description": "ПУЭ и государственные стандарты: статус, структура и применение в электромонтаже",
+      "file": "content/groups/1eo-24/mdk-04-02/semester-3/pue-and-gost/Лекция.html"
     }
   ]
 }
