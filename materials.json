@@ -128,14 +128,14 @@
           ]
         },
         {
-          "id": "pue-and-gost",
-          "name": "Правила устройства электроустановок. Государственный стандарт",
-          "materials": ["pue-and-gost-lecture"]
-        },
-        {
           "id": "attestation",
           "name": "Аттестационная работа",
           "materials": ["mdk-04-02-attestation"]
+        },
+        {
+          "id": "pue-and-gost",
+          "name": "Правила устройства электроустановок. Государственный стандарт",
+          "materials": ["pue-and-gost-lecture"]
         }
       ]
     },
