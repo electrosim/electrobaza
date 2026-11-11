@@ -247,6 +247,11 @@
           "materials": [
             "electromagnetic-induction-lecture"
           ]
+        },
+        {
+          "id": "alternating-current",
+          "name": "Однофазный переменный ток",
+          "materials": ["alternating-current-lecture"]
         }
       ]
     }
@@ -433,6 +438,13 @@
       "name": "Практическая работа",
       "description": "Выбор автоматического выключателя: расчётный ток, проверка отсечки, время-токовые характеристики B, C, D",
       "file": "content/groups/1me-25/mdk-05-02/circuit-breaker-selection/Практическая работа.html"
+    },
+    {
+      "id": "alternating-current-lecture",
+      "type": "lecture",
+      "name": "Лекция",
+      "description": "Однофазный переменный ток: параметры, действующие значения, сдвиг фаз",
+      "file": "content/groups/1a-25-3a-26-11/op-03/alternating-current/Лекция.html"
     }
   ]
 }
