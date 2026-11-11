@@ -45,14 +45,18 @@
       "contentPath": "groups/1me-25/mdk-05-01",
       "topics": [
         {
-          "id": "benchwork-attestation",
+          "id": "1-attestaciya-slesarnoe-delo",
           "name": "Слесарное дело. Аттестационная работа",
-          "materials": ["benchwork-attestation-practice"]
+          "materials": [
+            "1-attestaciya-slesarnoe-delo-attestation"
+          ]
         },
         {
-          "id": "wire-connections",
+          "id": "2-vidy-soedineniy-zhil",
           "name": "Виды соединений жил проводов и кабелей",
-          "materials": ["wire-connections-lecture"]
+          "materials": [
+            "2-vidy-soedineniy-zhil-lecture"
+          ]
         }
       ]
     },
@@ -62,23 +66,25 @@
       "contentPath": "groups/1me-25/mdk-05-02",
       "topics": [
         {
-          "id": "switch-socket-connection",
+          "id": "1-vyklyuchateli-i-rozetki",
           "name": "Подключение выключателей и розеток",
           "materials": [
-            "switch-socket-connection-practice"
+            "1-vyklyuchateli-i-rozetki-practice"
           ]
         },
         {
-          "id": "lighting-network-check",
+          "id": "2-proverka-osvetitelnoy-seti",
           "name": "Проверка осветительной сети",
           "materials": [
-            "lighting-network-check-practice"
+            "2-proverka-osvetitelnoy-seti-practice"
           ]
         },
         {
-          "id": "circuit-breaker-selection",
+          "id": "3-avtomaticheskiy-vyklyuchatel",
           "name": "Принцип действия и установка автоматического выключателя",
-          "materials": ["circuit-breaker-selection-practice"]
+          "materials": [
+            "3-avtomaticheskiy-vyklyuchatel-practice"
+          ]
         }
       ]
     },
@@ -89,17 +95,17 @@
       "contentPath": "groups/1eo-25/mdk-04-02/semester-1",
       "topics": [
         {
-          "id": "light-sources-luminaires",
+          "id": "1-istochniki-sveta-i-armatura",
           "name": "Электрические источники света. Осветительная арматура",
           "materials": [
-            "light-sources-luminaires-lecture"
+            "1-istochniki-sveta-i-armatura-lecture"
           ]
         },
         {
-          "id": "lighting-installation-repair",
+          "id": "2-montazh-i-remont-svetilnikov",
           "name": "Технология монтажа и ремонта светильников общего применения",
           "materials": [
-            "lighting-installation-repair-lecture"
+            "2-montazh-i-remont-svetilnikov-lecture"
           ]
         }
       ]
@@ -111,36 +117,40 @@
       "contentPath": "groups/1eo-24/mdk-04-02/semester-3",
       "topics": [
         {
-          "id": "undervoltage-release-light-sensor",
+          "id": "1-rascepitel-i-datchik-sveta",
           "name": "Монтаж, наладка и ремонт схемы, содержащей расцепитель минимального напряжения и датчик освещённости",
           "materials": [
-            "undervoltage-release-light-sensor-lecture",
-            "undervoltage-release-light-sensor-practice"
+            "1-rascepitel-i-datchik-sveta-lecture",
+            "1-rascepitel-i-datchik-sveta-practice"
           ]
         },
         {
-          "id": "three-phase-meter-connection",
+          "id": "2-trehfaznyy-schetchik",
           "name": "Монтаж, наладка и ремонт схемы подключения трёхфазного электронного счётчика",
           "materials": [
-            "three-phase-meter-connection-practice"
+            "2-trehfaznyy-schetchik-practice"
           ]
         },
         {
-          "id": "electrical-apparatus-faults",
+          "id": "3-neispravnosti-elektroapparatov",
           "name": "Неисправности электрических аппаратов и способы их устранения. Испытания и наладка электрических аппаратов",
           "materials": [
-            "electrical-apparatus-faults-lecture"
+            "3-neispravnosti-elektroapparatov-lecture"
           ]
         },
         {
-          "id": "attestation",
+          "id": "4-attestaciya",
           "name": "Аттестационная работа",
-          "materials": ["mdk-04-02-attestation"]
+          "materials": [
+            "4-attestaciya-attestation"
+          ]
         },
         {
-          "id": "pue-and-gost",
+          "id": "5-pue-i-gost",
           "name": "Правила устройства электроустановок. Государственный стандарт",
-          "materials": ["pue-and-gost-lecture"]
+          "materials": [
+            "5-pue-i-gost-lecture"
+          ]
         }
       ]
     },
@@ -150,14 +160,18 @@
       "contentPath": "groups/1eo-25/mdk-04-01",
       "topics": [
         {
-          "id": "soldering-tinning",
+          "id": "1-payka-i-luzhenie",
           "name": "Пайка. Лужение",
-          "materials": ["soldering-tinning-lecture"]
+          "materials": [
+            "1-payka-i-luzhenie-lecture"
+          ]
         },
         {
-          "id": "benchwork-attestation",
+          "id": "2-attestaciya-slesarnoe-delo",
           "name": "Слесарное дело. Аттестационная работа",
-          "materials": ["benchwork-attestation-practice"]
+          "materials": [
+            "1-attestaciya-slesarnoe-delo-attestation"
+          ]
         }
       ]
     },
@@ -167,25 +181,31 @@
       "contentPath": "groups/1eo-24/op-08",
       "topics": [
         {
-          "id": "information-resources",
+          "id": "1-informacionnye-resursy",
           "name": "Информационные ресурсы и информационные технологии",
-          "materials": ["information-resources-lecture"]
+          "materials": [
+            "1-informacionnye-resursy-lecture"
+          ]
         },
         {
-          "id": "information-systems",
+          "id": "2-informacionnye-sistemy",
           "name": "Информационные системы. Классификация информационных систем",
-          "materials": ["information-systems-lecture"]
+          "materials": [
+            "2-informacionnye-sistemy-lecture"
+          ]
         },
         {
-          "id": "engineering-calculations-automation",
+          "id": "3-avtomatizaciya-raschetov",
           "name": "Автоматизация выполнения различных инженерных расчётов",
-          "materials": ["engineering-calculations-automation-lecture"]
+          "materials": [
+            "3-avtomatizaciya-raschetov-lecture"
+          ]
         },
         {
-          "id": "math-software-packages",
+          "id": "4-pakety-dlya-raschetov",
           "name": "Общая характеристика пакетов прикладных программ для математических расчётов",
           "materials": [
-            "math-software-packages-lecture"
+            "4-pakety-dlya-raschetov-lecture"
           ]
         }
       ]
@@ -196,36 +216,46 @@
       "contentPath": "groups/1eo-24/op-12",
       "topics": [
         {
-          "id": "constitutional-system",
+          "id": "1-konstitucionnyy-stroy",
           "name": "Конституционный строй: форма правления, форма государственного устройства и политический режим",
           "materials": [
-            "constitutional-system-lecture"
+            "1-konstitucionnyy-stroy-lecture"
           ]
         },
         {
-          "id": "law-sources",
+          "id": "2-istochniki-prava",
           "name": "Понятие права. Источники права",
-          "materials": ["law-sources-lecture"]
+          "materials": [
+            "2-istochniki-prava-lecture"
+          ]
         },
         {
-          "id": "law-personality",
+          "id": "3-pravo-i-lichnost",
           "name": "Право и поведение личности",
-          "materials": ["law-personality-lecture"]
+          "materials": [
+            "3-pravo-i-lichnost-lecture"
+          ]
         },
         {
-          "id": "npa-validity",
+          "id": "4-deystvie-npa",
           "name": "Правила действия нормативных правовых актов",
-          "materials": ["npa-validity-lecture"]
+          "materials": [
+            "4-deystvie-npa-lecture"
+          ]
         },
         {
-          "id": "law-attestation",
+          "id": "5-attestaciya-pravo",
           "name": "Аттестационная работа",
-          "materials": ["law-attestation"]
+          "materials": [
+            "5-attestaciya-pravo-attestation"
+          ]
         },
         {
-          "id": "judicial-authority",
+          "id": "6-sudebnaya-vlast",
           "name": "Органы судебной власти",
-          "materials": ["judicial-authority-lecture"]
+          "materials": [
+            "6-sudebnaya-vlast-lecture"
+          ]
         }
       ]
     },
@@ -235,216 +265,218 @@
       "contentPath": "groups/1a-25-3a-26-11/op-03",
       "topics": [
         {
-          "id": "electromagnetism",
+          "id": "1-elektromagnetizm",
           "name": "Электромагнетизм и электромагнитная индукция",
           "materials": [
-            "electromagnetism-lecture"
+            "1-elektromagnetizm-lecture"
           ]
         },
         {
-          "id": "electromagnetic-induction",
+          "id": "2-elektromagnitnaya-indukciya",
           "name": "Закон электромагнитной индукции. Самоиндукция",
           "materials": [
-            "electromagnetic-induction-lecture"
+            "2-elektromagnitnaya-indukciya-lecture"
           ]
         },
         {
-          "id": "alternating-current",
+          "id": "3-peremenny-tok",
           "name": "Однофазный переменный ток",
-          "materials": ["alternating-current-lecture"]
+          "materials": [
+            "3-peremenny-tok-lecture"
+          ]
         }
       ]
     }
   ],
   "materials": [
     {
-      "id": "undervoltage-release-light-sensor-lecture",
+      "id": "1-rascepitel-i-datchik-sveta-lecture",
       "type": "lecture",
       "name": "Лекция",
       "description": "Расцепитель минимального напряжения: устройство, уставки, применение и расчёт",
-      "file": "content/groups/1eo-24/mdk-04-02/semester-3/undervoltage-release-light-sensor/Лекция (расцепитель).html"
+      "file": "content/groups/1eo-24/mdk-04-02/semester-3/1-rascepitel-i-datchik-sveta/Лекция (расцепитель).html"
     },
     {
-      "id": "undervoltage-release-light-sensor-practice",
+      "id": "1-rascepitel-i-datchik-sveta-practice",
       "type": "practice",
       "name": "Практическая работа",
       "description": "Расчёт параметров схемы с расцепителем минимального напряжения и датчиком освещённости",
-      "file": "content/groups/1eo-24/mdk-04-02/semester-3/undervoltage-release-light-sensor/Практическая работа.html"
+      "file": "content/groups/1eo-24/mdk-04-02/semester-3/1-rascepitel-i-datchik-sveta/Практическая работа.html"
     },
     {
-      "id": "constitutional-system-lecture",
+      "id": "1-konstitucionnyy-stroy-lecture",
       "type": "lecture",
       "name": "Лекция",
       "description": "Конституционный строй: форма правления, форма государственного устройства и политический режим",
-      "file": "content/groups/1eo-24/op-12/constitutional-system/Лекция.html"
+      "file": "content/groups/1eo-24/op-12/1-konstitucionnyy-stroy/Лекция.html"
     },
     {
-      "id": "math-software-packages-lecture",
+      "id": "4-pakety-dlya-raschetov-lecture",
       "type": "lecture",
       "name": "Лекция",
       "description": "Общая характеристика пакетов прикладных программ для математических расчётов",
-      "file": "content/groups/1eo-24/op-08/math-software-packages/Лекция.html"
+      "file": "content/groups/1eo-24/op-08/4-pakety-dlya-raschetov/Лекция.html"
     },
     {
-      "id": "switch-socket-connection-practice",
+      "id": "1-vyklyuchateli-i-rozetki-practice",
       "type": "practice",
       "name": "Практическая работа",
       "description": "Подключение выключателей и розеток: схемы и технологические карты",
-      "file": "content/groups/1me-25/mdk-05-02/switch-socket-connection/Практическая работа.html"
+      "file": "content/groups/1me-25/mdk-05-02/1-vyklyuchateli-i-rozetki/Практическая работа.html"
     },
     {
-      "id": "light-sources-luminaires-lecture",
+      "id": "1-istochniki-sveta-i-armatura-lecture",
       "type": "lecture",
       "name": "Лекция",
       "description": "Электрические источники света. Осветительная арматура",
-      "file": "content/groups/1eo-25/mdk-04-02/semester-1/light-sources-luminaires/Лекция.html"
+      "file": "content/groups/1eo-25/mdk-04-02/semester-1/1-istochniki-sveta-i-armatura/Лекция.html"
     },
     {
-      "id": "electromagnetism-lecture",
+      "id": "1-elektromagnetizm-lecture",
       "type": "lecture",
       "name": "Лекция",
       "description": "Электромагнетизм и электромагнитная индукция",
-      "file": "content/groups/1a-25-3a-26-11/op-03/electromagnetism/Лекция.html"
+      "file": "content/groups/1a-25-3a-26-11/op-03/1-elektromagnetizm/Лекция.html"
     },
     {
-      "id": "lighting-network-check-practice",
+      "id": "2-proverka-osvetitelnoy-seti-practice",
       "type": "practice",
       "name": "Практическая работа",
       "description": "Проверка осветительной сети: расчёт потери напряжения, выбор кабеля и аппарата защиты",
-      "file": "content/groups/1me-25/mdk-05-02/lighting-network-check/Практическая работа.html"
+      "file": "content/groups/1me-25/mdk-05-02/2-proverka-osvetitelnoy-seti/Практическая работа.html"
     },
     {
-      "id": "three-phase-meter-connection-practice",
+      "id": "2-trehfaznyy-schetchik-practice",
       "type": "practice",
       "name": "Практическая работа",
       "description": "Монтаж, наладка и ремонт схемы подключения трёхфазного электронного счётчика",
-      "file": "content/groups/1eo-24/mdk-04-02/semester-3/three-phase-meter-connection/Практическая работа.html"
+      "file": "content/groups/1eo-24/mdk-04-02/semester-3/2-trehfaznyy-schetchik/Практическая работа.html"
     },
     {
-      "id": "lighting-installation-repair-lecture",
+      "id": "2-montazh-i-remont-svetilnikov-lecture",
       "type": "lecture",
       "name": "Лекция",
       "description": "Технология монтажа и ремонта светильников общего применения",
-      "file": "content/groups/1eo-25/mdk-04-02/semester-1/lighting-installation-repair/Лекция.html"
+      "file": "content/groups/1eo-25/mdk-04-02/semester-1/2-montazh-i-remont-svetilnikov/Лекция.html"
     },
     {
-      "id": "electrical-apparatus-faults-lecture",
+      "id": "3-neispravnosti-elektroapparatov-lecture",
       "type": "lecture",
       "name": "Лекция",
       "description": "Неисправности, диагностика, испытания и наладка электрических аппаратов",
-      "file": "content/groups/1eo-24/mdk-04-02/semester-3/electrical-apparatus-faults/Лекция.html"
+      "file": "content/groups/1eo-24/mdk-04-02/semester-3/3-neispravnosti-elektroapparatov/Лекция.html"
     },
     {
-      "id": "soldering-tinning-lecture",
+      "id": "1-payka-i-luzhenie-lecture",
       "type": "lecture",
       "name": "Лекция",
       "description": "Пайка. Лужение",
-      "file": "content/groups/1eo-25/mdk-04-01/soldering-tinning/Лекция.html"
+      "file": "content/groups/1eo-25/mdk-04-01/1-payka-i-luzhenie/Лекция.html"
     },
     {
-      "id": "electromagnetic-induction-lecture",
+      "id": "2-elektromagnitnaya-indukciya-lecture",
       "type": "lecture",
       "name": "Лекция",
       "description": "Закон электромагнитной индукции. Самоиндукция",
-      "file": "content/groups/1a-25-3a-26-11/op-03/electromagnetic-induction/Лекция.html"
+      "file": "content/groups/1a-25-3a-26-11/op-03/2-elektromagnitnaya-indukciya/Лекция.html"
     },
     {
-      "id": "benchwork-attestation-practice",
+      "id": "1-attestaciya-slesarnoe-delo-attestation",
       "type": "attestation",
       "name": "Аттестационная работа",
       "description": "Слесарное дело. Аттестационная работа",
-      "file": "content/groups/1me-25/mdk-05-01/benchwork-attestation/Аттестационная работа.html"
+      "file": "content/groups/1me-25/mdk-05-01/1-attestaciya-slesarnoe-delo/Аттестационная работа.html"
     },
     {
-      "id": "law-sources-lecture",
+      "id": "2-istochniki-prava-lecture",
       "type": "lecture",
       "name": "Лекция",
       "description": "Понятие права. Источники права",
-      "file": "content/groups/1eo-24/op-12/law-sources/Лекция.html"
+      "file": "content/groups/1eo-24/op-12/2-istochniki-prava/Лекция.html"
     },
     {
-      "id": "law-personality-lecture",
+      "id": "3-pravo-i-lichnost-lecture",
       "type": "lecture",
       "name": "Лекция",
       "description": "Право и поведение личности",
-      "file": "content/groups/1eo-24/op-12/law-personality/Лекция.html"
+      "file": "content/groups/1eo-24/op-12/3-pravo-i-lichnost/Лекция.html"
     },
     {
-      "id": "npa-validity-lecture",
+      "id": "4-deystvie-npa-lecture",
       "type": "lecture",
       "name": "Лекция",
       "description": "Правила действия нормативных правовых актов",
-      "file": "content/groups/1eo-24/op-12/npa-validity/Лекция.html"
+      "file": "content/groups/1eo-24/op-12/4-deystvie-npa/Лекция.html"
     },
     {
-      "id": "judicial-authority-lecture",
+      "id": "6-sudebnaya-vlast-lecture",
       "type": "lecture",
       "name": "Лекция",
       "description": "Судебная власть, судебная система, статус судей и право на судебную защиту",
-      "file": "content/groups/1eo-24/op-12/judicial-authority/Лекция.html"
+      "file": "content/groups/1eo-24/op-12/6-sudebnaya-vlast/Лекция.html"
     },
     {
-      "id": "law-attestation",
+      "id": "5-attestaciya-pravo-attestation",
       "type": "attestation",
       "name": "Аттестационная работа",
       "description": "Правовые основы профессиональной деятельности",
-      "file": "content/groups/1eo-24/op-12/attestation/Аттестационная работа.html"
+      "file": "content/groups/1eo-24/op-12/5-attestaciya-pravo/Аттестационная работа.html"
     },
     {
-      "id": "mdk-04-02-attestation",
+      "id": "4-attestaciya-attestation",
       "type": "attestation",
       "name": "Аттестационная работа",
       "description": "МДК 04.02 Организация работ по сборке, монтажу и ремонту электрооборудования",
-      "file": "content/groups/1eo-24/mdk-04-02/semester-3/attestation/Аттестационная работа.html"
+      "file": "content/groups/1eo-24/mdk-04-02/semester-3/4-attestaciya/Аттестационная работа.html"
     },
     {
-      "id": "wire-connections-lecture",
+      "id": "2-vidy-soedineniy-zhil-lecture",
       "type": "lecture",
       "name": "Лекция",
       "description": "Виды соединений жил проводов и кабелей: скрутка, пайка, сварка, опрессовка, зажимы",
-      "file": "content/groups/1me-25/mdk-05-01/wire-connections/Лекция.html"
+      "file": "content/groups/1me-25/mdk-05-01/2-vidy-soedineniy-zhil/Лекция.html"
     },
     {
-      "id": "information-resources-lecture",
+      "id": "1-informacionnye-resursy-lecture",
       "type": "lecture",
       "name": "Лекция",
       "description": "Информационные ресурсы и информационные технологии: данные, информация, знания",
-      "file": "content/groups/1eo-24/op-08/information-resources/Лекция.html"
+      "file": "content/groups/1eo-24/op-08/1-informacionnye-resursy/Лекция.html"
     },
     {
-      "id": "information-systems-lecture",
+      "id": "2-informacionnye-sistemy-lecture",
       "type": "lecture",
       "name": "Лекция",
       "description": "Информационные системы и их классификация",
-      "file": "content/groups/1eo-24/op-08/information-systems/Лекция.html"
+      "file": "content/groups/1eo-24/op-08/2-informacionnye-sistemy/Лекция.html"
     },
     {
-      "id": "engineering-calculations-automation-lecture",
+      "id": "3-avtomatizaciya-raschetov-lecture",
       "type": "lecture",
       "name": "Лекция",
       "description": "Автоматизация инженерных расчётов: инструменты, этапы, пример расчёта",
-      "file": "content/groups/1eo-24/op-08/engineering-calculations-automation/Лекция.html"
+      "file": "content/groups/1eo-24/op-08/3-avtomatizaciya-raschetov/Лекция.html"
     },
     {
-      "id": "pue-and-gost-lecture",
+      "id": "5-pue-i-gost-lecture",
       "type": "lecture",
       "name": "Лекция",
       "description": "ПУЭ и государственные стандарты: статус, структура и применение в электромонтаже",
-      "file": "content/groups/1eo-24/mdk-04-02/semester-3/pue-and-gost/Лекция.html"
+      "file": "content/groups/1eo-24/mdk-04-02/semester-3/5-pue-i-gost/Лекция.html"
     },
     {
-      "id": "circuit-breaker-selection-practice",
+      "id": "3-avtomaticheskiy-vyklyuchatel-practice",
       "type": "practice",
       "name": "Практическая работа",
       "description": "Выбор автоматического выключателя: расчётный ток, проверка отсечки, время-токовые характеристики B, C, D",
-      "file": "content/groups/1me-25/mdk-05-02/circuit-breaker-selection/Практическая работа.html"
+      "file": "content/groups/1me-25/mdk-05-02/3-avtomaticheskiy-vyklyuchatel/Практическая работа.html"
     },
     {
-      "id": "alternating-current-lecture",
+      "id": "3-peremenny-tok-lecture",
       "type": "lecture",
       "name": "Лекция",
       "description": "Однофазный переменный ток: параметры, действующие значения, сдвиг фаз",
-      "file": "content/groups/1a-25-3a-26-11/op-03/alternating-current/Лекция.html"
+      "file": "content/groups/1a-25-3a-26-11/op-03/3-peremenny-tok/Лекция.html"
     }
   ]
 }

@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 """Лекция «Однофазный переменный ток» (ОП.03) по материалам учебника."""
 
 import os
@@ -11,7 +11,7 @@ from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 from docx.shared import Cm, Pt, RGBColor
 
-BASE = r"D:\Electrobaza\content\groups\1a-25-3a-26-11\op-03\alternating-current"
+BASE = r"D:\Electrobaza\content\groups\1a-25-3a-26-11\op-03\3-peremenny-tok"
 IMG = os.path.join(BASE, "images")
 OUT = os.path.join(BASE, "docs", "Лекция — Однофазный переменный ток.docx")
 SRC = os.path.join(os.environ["TEMP"], "op03")
