@@ -289,7 +289,8 @@
           "id": "3-peremenny-tok",
           "name": "Однофазный переменный ток",
           "materials": [
-            "3-peremenny-tok-lecture"
+            "3-peremenny-tok-lecture",
+            "3-peremenny-tok-table"
           ]
         }
       ]
@@ -491,6 +492,13 @@
       "name": "Лекция",
       "description": "Однофазный переменный ток: параметры, действующие значения, сдвиг фаз",
       "file": "content/groups/1a-25-3a-26-11/op-03/3-peremenny-tok/Лекция.html"
+    },
+    {
+      "id": "3-peremenny-tok-table",
+      "type": "file",
+      "name": "Таблица",
+      "description": "Перевод градусов в радианы для основных углов",
+      "file": "content/groups/1a-25-3a-26-11/op-03/3-peremenny-tok/Таблица — Градусы и радианы.html"
     }
   ]
 }
