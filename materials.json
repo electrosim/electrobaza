@@ -85,6 +85,13 @@
           "materials": [
             "3-avtomaticheskiy-vyklyuchatel-practice"
           ]
+        },
+        {
+          "id": "4-uzo",
+          "name": "Устройство защитного отключения",
+          "materials": [
+            "4-uzo-lecture"
+          ]
         }
       ]
     },
@@ -470,6 +477,13 @@
       "name": "Практическая работа",
       "description": "Выбор автоматического выключателя: расчётный ток, проверка отсечки, время-токовые характеристики B, C, D",
       "file": "content/groups/1me-25/mdk-05-02/3-avtomaticheskiy-vyklyuchatel/Практическая работа.html"
+    },
+    {
+      "id": "4-uzo-lecture",
+      "type": "lecture",
+      "name": "Лекция",
+      "description": "Устройство защитного отключения: назначение, принцип действия, характеристики и включение в цепь",
+      "file": "content/groups/1me-25/mdk-05-02/4-uzo/Лекция.html"
     },
     {
       "id": "3-peremenny-tok-lecture",
