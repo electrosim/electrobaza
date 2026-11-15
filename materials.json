@@ -158,6 +158,13 @@
           "materials": [
             "5-pue-i-gost-lecture"
           ]
+        },
+        {
+          "id": "6-pravovoy-analiz-pue",
+          "name": "Правовой анализ ПУЭ",
+          "materials": [
+            "6-pravovoy-analiz-pue-practice"
+          ]
         }
       ]
     },
@@ -262,6 +269,13 @@
           "name": "Органы судебной власти",
           "materials": [
             "6-sudebnaya-vlast-lecture"
+          ]
+        },
+        {
+          "id": "7-pravovoy-analiz-pue",
+          "name": "Правовой анализ ПУЭ",
+          "materials": [
+            "6-pravovoy-analiz-pue-practice"
           ]
         }
       ]
@@ -471,6 +485,13 @@
       "name": "Лекция",
       "description": "ПУЭ и государственные стандарты: статус, структура и применение в электромонтаже",
       "file": "content/groups/1eo-24/mdk-04-02/semester-3/5-pue-i-gost/Лекция.html"
+    },
+    {
+      "id": "6-pravovoy-analiz-pue-practice",
+      "type": "practice",
+      "name": "Практическая работа",
+      "description": "Правовой анализ ПУЭ: нормы, квалификация нарушений, две ситуации",
+      "file": "content/groups/1eo-24/mdk-04-02/semester-3/6-pravovoy-analiz-pue/Практическая работа.html"
     },
     {
       "id": "3-avtomaticheskiy-vyklyuchatel-practice",
