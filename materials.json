@@ -92,6 +92,13 @@
           "materials": [
             "4-uzo-lecture"
           ]
+        },
+        {
+          "id": "5-magnitnyy-puskatel",
+          "name": "Устройство и принцип действия магнитного пускателя",
+          "materials": [
+            "5-magnitnyy-puskatel-lecture"
+          ]
         }
       ]
     },
@@ -506,6 +513,13 @@
       "name": "Лекция",
       "description": "Устройство защитного отключения: назначение, принцип действия, характеристики и включение в цепь",
       "file": "content/groups/1me-25/mdk-05-02/4-uzo/Лекция.html"
+    },
+    {
+      "id": "5-magnitnyy-puskatel-lecture",
+      "type": "lecture",
+      "name": "Лекция",
+      "description": "Магнитный пускатель: устройство, магнитная система, принцип действия и самоблокировка",
+      "file": "content/groups/1me-25/mdk-05-02/5-magnitnyy-puskatel/Лекция.html"
     },
     {
       "id": "3-peremenny-tok-lecture",
