@@ -243,6 +243,13 @@
           "materials": [
             "4-pakety-dlya-raschetov-lecture"
           ]
+        },
+        {
+          "id": "5-fizicheskie-velichiny",
+          "name": "Работа с физическими величинами",
+          "materials": [
+            "5-fizicheskie-velichiny-lecture"
+          ]
         }
       ]
     },
@@ -360,6 +367,13 @@
       "name": "Лекция",
       "description": "Общая характеристика пакетов прикладных программ для математических расчётов",
       "file": "content/groups/1eo-24/op-08/4-pakety-dlya-raschetov/Лекция.html"
+    },
+    {
+      "id": "5-fizicheskie-velichiny-lecture",
+      "type": "lecture",
+      "name": "Лекция",
+      "description": "Физические величины и единицы: приставки, правила записи, работа в таблицах и проверка размерности",
+      "file": "content/groups/1eo-24/op-08/5-fizicheskie-velichiny/Лекция.html"
     },
     {
       "id": "1-vyklyuchateli-i-rozetki-practice",
