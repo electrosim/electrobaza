@@ -62,7 +62,8 @@
           "id": "3-okoncevanie-zhil-nakonechnikami",
           "name": "Оконцевание жил наконечниками",
           "materials": [
-            "3-okoncevanie-zhil-nakonechnikami-lecture"
+            "3-okoncevanie-zhil-nakonechnikami-lecture",
+            "3-okoncevanie-zhil-nakonechnikami-prezentaciya"
           ]
         }
       ]
@@ -478,6 +479,13 @@
       "name": "Лекция",
       "description": "Оконцевание жил наконечниками: виды, выбор, опрессовка и контроль качества",
       "file": "content/groups/1me-25/mdk-05-01/3-okoncevanie-zhil-nakonechnikami/Лекция.html"
+    },
+    {
+      "id": "3-okoncevanie-zhil-nakonechnikami-prezentaciya",
+      "type": "slides",
+      "name": "Презентация",
+      "description": "10 слайдов: виды наконечников, инструмент, опрессовка и контроль качества",
+      "file": "content/groups/1me-25/mdk-05-01/3-okoncevanie-zhil-nakonechnikami/Презентация.html"
     },
     {
       "id": "1-informacionnye-resursy-lecture",

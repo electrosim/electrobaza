@@ -153,6 +153,8 @@ img[src^="http"] + figcaption { margin: 10px auto 0; max-width: 560px; color: va
 .note { margin: 22px 0; padding: 13px 17px; border-left: 4px solid #70a786; background: #f2f7f3; }
 .slide { display: grid; align-content: center; min-height: 310px; margin: 20px 0; padding: clamp(24px, 6vw, 48px); border-radius: 17px; background: var(--accent-soft); }
 .slide[hidden], .pager[hidden] { display: none; }
+.material-reader .slide-image { display: block; min-height: 0; padding: 0; margin: 16px 0; background: none; border-radius: 0; }
+.material-reader .slide-image img { width: 100%; max-width: 100%; margin: 0; border-radius: 14px; }
 .slide-count { color: var(--accent); font-size: 14px; font-weight: 700; }
 .slide h2 { margin: 9px 0; font-size: clamp(30px, 6vw, 45px); }
 .slide p { margin-bottom: 0; font-size: 20px; }
