@@ -201,6 +201,13 @@
           "materials": [
             "1-attestaciya-slesarnoe-delo-attestation"
           ]
+        },
+        {
+          "id": "3-organizaciya-truda",
+          "name": "Организация труда при выполнении электромонтажных работ",
+          "materials": [
+            "3-organizaciya-truda-lecture"
+          ]
         }
       ]
     },
@@ -409,6 +416,13 @@
       "name": "Лекция",
       "description": "Пайка. Лужение",
       "file": "content/groups/1eo-25/mdk-04-01/1-payka-i-luzhenie/Лекция.html"
+    },
+    {
+      "id": "3-organizaciya-truda-lecture",
+      "type": "lecture",
+      "name": "Лекция",
+      "description": "Организация труда: структура подразделения, бригады, рабочие места, нормирование, документация и охрана труда",
+      "file": "content/groups/1eo-25/mdk-04-01/3-organizaciya-truda/Лекция.html"
     },
     {
       "id": "2-elektromagnitnaya-indukciya-lecture",
