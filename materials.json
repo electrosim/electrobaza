@@ -57,6 +57,13 @@
           "materials": [
             "2-vidy-soedineniy-zhil-lecture"
           ]
+        },
+        {
+          "id": "3-okoncevanie-zhil-nakonechnikami",
+          "name": "Оконцевание жил наконечниками",
+          "materials": [
+            "3-okoncevanie-zhil-nakonechnikami-lecture"
+          ]
         }
       ]
     },
@@ -464,6 +471,13 @@
       "name": "Лекция",
       "description": "Виды соединений жил проводов и кабелей: скрутка, пайка, сварка, опрессовка, зажимы",
       "file": "content/groups/1me-25/mdk-05-01/2-vidy-soedineniy-zhil/Лекция.html"
+    },
+    {
+      "id": "3-okoncevanie-zhil-nakonechnikami-lecture",
+      "type": "lecture",
+      "name": "Лекция",
+      "description": "Оконцевание жил наконечниками: виды, выбор, опрессовка и контроль качества",
+      "file": "content/groups/1me-25/mdk-05-01/3-okoncevanie-zhil-nakonechnikami/Лекция.html"
     },
     {
       "id": "1-informacionnye-resursy-lecture",
