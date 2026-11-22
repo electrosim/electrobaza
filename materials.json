@@ -313,6 +313,13 @@
           "materials": [
             "6-pravovoy-analiz-pue-practice"
           ]
+        },
+        {
+          "id": "8-organy-vlasti",
+          "name": "Органы власти Российской Федерации",
+          "materials": [
+            "8-organy-vlasti-lecture"
+          ]
         }
       ]
     },
@@ -486,6 +493,13 @@
       "name": "Лекция",
       "description": "Судебная власть, судебная система, статус судей и право на судебную защиту",
       "file": "content/groups/1eo-24/op-12/6-sudebnaya-vlast/Лекция.html"
+    },
+    {
+      "id": "8-organy-vlasti-lecture",
+      "type": "lecture",
+      "name": "Лекция",
+      "description": "Президент, Федеральное Собрание, Правительство, суды, прокуратура и местное самоуправление",
+      "file": "content/groups/1eo-24/op-12/8-organy-vlasti/Лекция.html"
     },
     {
       "id": "5-attestaciya-pravo-attestation",
