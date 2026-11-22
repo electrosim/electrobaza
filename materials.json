@@ -180,6 +180,13 @@
           "materials": [
             "6-pravovoy-analiz-pue-practice"
           ]
+        },
+        {
+          "id": "7-kvalifikacionnye-gruppy",
+          "name": "Квалификационные группы и организация рабочего места",
+          "materials": [
+            "7-kvalifikacionnye-gruppy-lecture"
+          ]
         }
       ]
     },
@@ -549,6 +556,13 @@
       "name": "Практическая работа",
       "description": "Правовой анализ ПУЭ: нормы, квалификация нарушений, две ситуации",
       "file": "content/groups/1eo-24/mdk-04-02/semester-3/6-pravovoy-analiz-pue/Практическая работа.html"
+    },
+    {
+      "id": "7-kvalifikacionnye-gruppy-lecture",
+      "type": "lecture",
+      "name": "Лекция",
+      "description": "Квалификационные группы I–V, порядок допуска, организация рабочего места, плакаты и средства защиты",
+      "file": "content/groups/1eo-24/mdk-04-02/semester-3/7-kvalifikacionnye-gruppy/Лекция.html"
     },
     {
       "id": "3-avtomaticheskiy-vyklyuchatel-practice",
