@@ -349,6 +349,13 @@
             "3-peremenny-tok-lecture",
             "3-peremenny-tok-table"
           ]
+        },
+        {
+          "id": "4-kontrolnaya-sinusoidalnyy-tok",
+          "name": "Синусоидальный переменный ток. Контрольная работа",
+          "materials": [
+            "4-kontrolnaya-sinusoidalnyy-tok-test"
+          ]
         }
       ]
     }
@@ -612,6 +619,13 @@
       "name": "Таблица",
       "description": "Перевод градусов в радианы для основных углов",
       "file": "content/groups/1a-25-3a-26-11/op-03/3-peremenny-tok/Таблица — Градусы и радианы.html"
+    },
+    {
+      "id": "4-kontrolnaya-sinusoidalnyy-tok-test",
+      "type": "test",
+      "name": "Контрольная работа",
+      "description": "Четыре варианта по четыре задания: мгновенная ЭДС, действующие значения, частота и фаза",
+      "file": "content/groups/1a-25-3a-26-11/op-03/4-kontrolnaya-sinusoidalnyy-tok/Контрольная работа.html"
     }
   ]
 }
