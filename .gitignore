@@ -1,4 +1,8 @@
-﻿~$*
+~$*
 Thumbs.db
 .DS_Store
+
+# ответы для преподавателя — не публикуются
+content/**/docs/Ответы*.docx
+tools/make_test_answers.py
 
