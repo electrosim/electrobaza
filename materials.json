@@ -107,6 +107,13 @@
           "materials": [
             "5-magnitnyy-puskatel-lecture"
           ]
+        },
+        {
+          "id": "6-shemy-podklyucheniya",
+          "name": "Схемы подключения магнитного пускателя",
+          "materials": [
+            "6-shemy-podklyucheniya-lecture"
+          ]
         }
       ]
     },
@@ -605,6 +612,13 @@
       "name": "Лекция",
       "description": "Магнитный пускатель: устройство, магнитная система, принцип действия и самоблокировка",
       "file": "content/groups/1me-25/mdk-05-02/5-magnitnyy-puskatel/Лекция.html"
+    },
+    {
+      "id": "6-shemy-podklyucheniya-lecture",
+      "type": "lecture",
+      "name": "Лекция",
+      "description": "Нереверсивная и реверсивная схемы подключения пускателя, самоблокировка и блокировки",
+      "file": "content/groups/1me-25/mdk-05-02/6-shemy-podklyucheniya/Лекция.html"
     },
     {
       "id": "3-peremenny-tok-lecture",
