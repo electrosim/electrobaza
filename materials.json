@@ -638,7 +638,7 @@
       "id": "4-kontrolnaya-sinusoidalnyy-tok-test",
       "type": "test",
       "name": "Контрольная работа",
-      "description": "Четыре варианта по четыре задания: мгновенная ЭДС, действующие значения, частота и фаза",
+      "description": "Четыре варианта: три теоретических вопроса и две задачи на параметры синусоидального тока",
       "file": "content/groups/1a-25-3a-26-11/op-03/4-kontrolnaya-sinusoidalnyy-tok/Контрольная работа.html"
     }
   ]
