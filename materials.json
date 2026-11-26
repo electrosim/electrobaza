@@ -65,6 +65,13 @@
             "3-okoncevanie-zhil-nakonechnikami-lecture",
             "3-okoncevanie-zhil-nakonechnikami-prezentaciya"
           ]
+        },
+        {
+          "id": "4-opressovka-gilzami",
+          "name": "Опрессовка гильзами и изоляция соединений",
+          "materials": [
+            "4-opressovka-gilzami-practice"
+          ]
         }
       ]
     },
@@ -549,6 +556,13 @@
       "name": "Презентация",
       "description": "10 слайдов: виды наконечников, инструмент, опрессовка и контроль качества",
       "file": "content/groups/1me-25/mdk-05-01/3-okoncevanie-zhil-nakonechnikami/Презентация.html"
+    },
+    {
+      "id": "4-opressovka-gilzami-practice",
+      "type": "practice",
+      "name": "Практическая работа",
+      "description": "Восемь вариантов: подбор гильзы, длина зачистки, число обжимов, изоляция и контроль соединения",
+      "file": "content/groups/1me-25/mdk-05-01/4-opressovka-gilzami/Практическая работа.html"
     },
     {
       "id": "1-informacionnye-resursy-lecture",
